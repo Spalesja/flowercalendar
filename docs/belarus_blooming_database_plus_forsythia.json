@@ -1,0 +1,1898 @@
+{
+  "cities": [
+    {
+      "id": 1,
+      "slug": "minsk",
+      "name": "Минск",
+      "region": "Минская область",
+      "short_description": "Региональная единица поиска для календаря цветения.",
+      "full_description": "Минск используется как город-ярлык для поиска по всей территории минская область.",
+      "hero_image": ""
+    },
+    {
+      "id": 2,
+      "slug": "grodno",
+      "name": "Гродно",
+      "region": "Гродненская область",
+      "short_description": "Региональная единица поиска для календаря цветения.",
+      "full_description": "Гродно используется как город-ярлык для поиска по всей территории гродненская область.",
+      "hero_image": ""
+    },
+    {
+      "id": 3,
+      "slug": "brest",
+      "name": "Брест",
+      "region": "Брестская область",
+      "short_description": "Региональная единица поиска для календаря цветения.",
+      "full_description": "Брест используется как город-ярлык для поиска по всей территории брестская область.",
+      "hero_image": ""
+    },
+    {
+      "id": 4,
+      "slug": "vitebsk",
+      "name": "Витебск",
+      "region": "Витебская область",
+      "short_description": "Региональная единица поиска для календаря цветения.",
+      "full_description": "Витебск используется как город-ярлык для поиска по всей территории витебская область.",
+      "hero_image": ""
+    },
+    {
+      "id": 5,
+      "slug": "gomel",
+      "name": "Гомель",
+      "region": "Гомельская область",
+      "short_description": "Региональная единица поиска для календаря цветения.",
+      "full_description": "Гомель используется как город-ярлык для поиска по всей территории гомельская область.",
+      "hero_image": ""
+    },
+    {
+      "id": 6,
+      "slug": "mogilev",
+      "name": "Могилёв",
+      "region": "Могилёвская область",
+      "short_description": "Региональная единица поиска для календаря цветения.",
+      "full_description": "Могилёв используется как город-ярлык для поиска по всей территории могилёвская область.",
+      "hero_image": ""
+    }
+  ],
+  "plants": [
+    {
+      "id": 1,
+      "slug": "pervotsvety",
+      "name": "Первоцветы",
+      "latin_name": "Vernal ephemerals (mixed spp.)",
+      "short_description": "Первоцветы в календаре цветения Беларуси.",
+      "full_description": "Первоцветы используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 2,
+      "slug": "verba-iva",
+      "name": "Верба (ива)",
+      "latin_name": "Salix spp.",
+      "short_description": "Верба (ива) в календаре цветения Беларуси.",
+      "full_description": "Верба (ива) используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 3,
+      "slug": "olkha",
+      "name": "Ольха",
+      "latin_name": "Alnus spp.",
+      "short_description": "Ольха в календаре цветения Беларуси.",
+      "full_description": "Ольха используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 4,
+      "slug": "leshchina",
+      "name": "Лещина",
+      "latin_name": "Corylus avellana",
+      "short_description": "Лещина в календаре цветения Беларуси.",
+      "full_description": "Лещина используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 5,
+      "slug": "yabloni",
+      "name": "Яблони",
+      "latin_name": "Malus domestica",
+      "short_description": "Яблони в календаре цветения Беларуси.",
+      "full_description": "Яблони используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 6,
+      "slug": "vishni",
+      "name": "Вишни",
+      "latin_name": "Prunus cerasus",
+      "short_description": "Вишни в календаре цветения Беларуси.",
+      "full_description": "Вишни используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 7,
+      "slug": "slivy",
+      "name": "Сливы",
+      "latin_name": "Prunus domestica",
+      "short_description": "Сливы в календаре цветения Беларуси.",
+      "full_description": "Сливы используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 8,
+      "slug": "abrikosy",
+      "name": "Абрикосы",
+      "latin_name": "Prunus armeniaca",
+      "short_description": "Абрикосы в календаре цветения Беларуси.",
+      "full_description": "Абрикосы используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 9,
+      "slug": "tyulpany",
+      "name": "Тюльпаны",
+      "latin_name": "Tulipa spp.",
+      "short_description": "Тюльпаны в календаре цветения Беларуси.",
+      "full_description": "Тюльпаны используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 10,
+      "slug": "nartsissy",
+      "name": "Нарциссы",
+      "latin_name": "Narcissus spp.",
+      "short_description": "Нарциссы в календаре цветения Беларуси.",
+      "full_description": "Нарциссы используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 11,
+      "slug": "magnoliya",
+      "name": "Магнолия",
+      "latin_name": "Magnolia spp.",
+      "short_description": "Магнолия в календаре цветения Беларуси.",
+      "full_description": "Магнолия используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 12,
+      "slug": "siren",
+      "name": "Сирень",
+      "latin_name": "Syringa vulgaris",
+      "short_description": "Сирень в календаре цветения Беларуси.",
+      "full_description": "Сирень используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 13,
+      "slug": "klen",
+      "name": "Клён",
+      "latin_name": "Acer platanoides",
+      "short_description": "Клён в календаре цветения Беларуси.",
+      "full_description": "Клён используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 14,
+      "slug": "dub",
+      "name": "Дуб",
+      "latin_name": "Quercus robur",
+      "short_description": "Дуб в календаре цветения Беларуси.",
+      "full_description": "Дуб используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 15,
+      "slug": "oduvanchik",
+      "name": "Одуванчик",
+      "latin_name": "Taraxacum officinale",
+      "short_description": "Одуванчик в календаре цветения Беларуси.",
+      "full_description": "Одуванчик используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 16,
+      "slug": "klever-lugovoy",
+      "name": "Клевер луговой",
+      "latin_name": "Trifolium pratense",
+      "short_description": "Клевер луговой в календаре цветения Беларуси.",
+      "full_description": "Клевер луговой используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 17,
+      "slug": "rozy",
+      "name": "Розы",
+      "latin_name": "Rosa spp.",
+      "short_description": "Розы в календаре цветения Беларуси.",
+      "full_description": "Розы используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 18,
+      "slug": "shalfey",
+      "name": "Шалфей",
+      "latin_name": "Salvia officinalis",
+      "short_description": "Шалфей в календаре цветения Беларуси.",
+      "full_description": "Шалфей используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 19,
+      "slug": "chabrets",
+      "name": "Чабрец",
+      "latin_name": "Thymus serpyllum",
+      "short_description": "Чабрец в календаре цветения Беларуси.",
+      "full_description": "Чабрец используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 20,
+      "slug": "piony",
+      "name": "Пионы",
+      "latin_name": "Paeonia lactiflora",
+      "short_description": "Пионы в календаре цветения Беларуси.",
+      "full_description": "Пионы используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 21,
+      "slug": "lipa",
+      "name": "Липа",
+      "latin_name": "Tilia cordata",
+      "short_description": "Липа в календаре цветения Беларуси.",
+      "full_description": "Липа используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 22,
+      "slug": "lavanda",
+      "name": "Лаванда",
+      "latin_name": "Lavandula angustifolia",
+      "short_description": "Лаванда в календаре цветения Беларуси.",
+      "full_description": "Лаванда используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 23,
+      "slug": "tysyachelistnik",
+      "name": "Тысячелистник",
+      "latin_name": "Achillea millefolium",
+      "short_description": "Тысячелистник в календаре цветения Беларуси.",
+      "full_description": "Тысячелистник используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 24,
+      "slug": "vasilki",
+      "name": "Васильки",
+      "latin_name": "Centaurea cyanus",
+      "short_description": "Васильки в календаре цветения Беларуси.",
+      "full_description": "Васильки используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 25,
+      "slug": "podsolnuhi",
+      "name": "Подсолнухи",
+      "latin_name": "Helianthus annuus",
+      "short_description": "Подсолнухи в календаре цветения Беларуси.",
+      "full_description": "Подсолнухи используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 26,
+      "slug": "polyn",
+      "name": "Полынь",
+      "latin_name": "Artemisia spp.",
+      "short_description": "Полынь в календаре цветения Беларуси.",
+      "full_description": "Полынь используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 27,
+      "slug": "gladiolusy",
+      "name": "Гладиолусы",
+      "latin_name": "Gladiolus × hortulanus",
+      "short_description": "Гладиолусы в календаре цветения Беларуси.",
+      "full_description": "Гладиолусы используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 28,
+      "slug": "gortenziya",
+      "name": "Гортензия",
+      "latin_name": "Hydrangea paniculata",
+      "short_description": "Гортензия в календаре цветения Беларуси.",
+      "full_description": "Гортензия используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 29,
+      "slug": "floksy",
+      "name": "Флоксы",
+      "latin_name": "Phlox paniculata",
+      "short_description": "Флоксы в календаре цветения Беларуси.",
+      "full_description": "Флоксы используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 30,
+      "slug": "geran",
+      "name": "Герань",
+      "latin_name": "Geranium spp.",
+      "short_description": "Герань в календаре цветения Беларуси.",
+      "full_description": "Герань используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 31,
+      "slug": "astry",
+      "name": "Астры",
+      "latin_name": "Aster spp.",
+      "short_description": "Астры в календаре цветения Беларуси.",
+      "full_description": "Астры используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 32,
+      "slug": "lvinyy-zev",
+      "name": "Львиный зев",
+      "latin_name": "Antirrhinum majus",
+      "short_description": "Львиный зев в календаре цветения Беларуси.",
+      "full_description": "Львиный зев используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 33,
+      "slug": "hrizantemy",
+      "name": "Хризантемы",
+      "latin_name": "Chrysanthemum × morifolium",
+      "short_description": "Хризантемы в календаре цветения Беларуси.",
+      "full_description": "Хризантемы используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 34,
+      "slug": "georginy",
+      "name": "Георгины",
+      "latin_name": "Dahlia pinnata",
+      "short_description": "Георгины в календаре цветения Беларуси.",
+      "full_description": "Георгины используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 35,
+      "slug": "zolotaya-listva",
+      "name": "Золотая листва по осени",
+      "latin_name": "Autumn foliage coloration",
+      "short_description": "Золотая листва по осени в календаре цветения Беларуси.",
+      "full_description": "Золотая листва по осени используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
+    },
+    {
+      "id": 36,
+      "slug": "forzitsiya",
+      "name": "Форзиция",
+      "latin_name": "Forsythia × intermedia",
+      "short_description": "Раннецветущий декоративный кустарник с ярко-жёлтыми цветками.",
+      "full_description": "Форзиция — один из самых ранних декоративных кустарников весны. В календаре цветения Беларуси используется как отдельная сущность для поиска по сезонам и областям.",
+      "hero_image": ""
+    }
+  ],
+  "floweringRecords": [
+    {
+      "id": 1,
+      "city_id": 1,
+      "plant_id": 1,
+      "start_date": "2000-03-21",
+      "end_date": "2000-04-02"
+    },
+    {
+      "id": 2,
+      "city_id": 1,
+      "plant_id": 2,
+      "start_date": "2000-03-31",
+      "end_date": "2000-04-14"
+    },
+    {
+      "id": 3,
+      "city_id": 1,
+      "plant_id": 3,
+      "start_date": "2000-03-29",
+      "end_date": "2000-04-12"
+    },
+    {
+      "id": 4,
+      "city_id": 1,
+      "plant_id": 4,
+      "start_date": "2000-04-02",
+      "end_date": "2000-04-16"
+    },
+    {
+      "id": 5,
+      "city_id": 1,
+      "plant_id": 5,
+      "start_date": "2000-04-26",
+      "end_date": "2000-05-10"
+    },
+    {
+      "id": 6,
+      "city_id": 1,
+      "plant_id": 6,
+      "start_date": "2000-04-18",
+      "end_date": "2000-05-02"
+    },
+    {
+      "id": 7,
+      "city_id": 1,
+      "plant_id": 7,
+      "start_date": "2000-04-19",
+      "end_date": "2000-05-03"
+    },
+    {
+      "id": 8,
+      "city_id": 1,
+      "plant_id": 8,
+      "start_date": "2000-04-14",
+      "end_date": "2000-04-28"
+    },
+    {
+      "id": 9,
+      "city_id": 1,
+      "plant_id": 9,
+      "start_date": "2000-04-13",
+      "end_date": "2000-05-05"
+    },
+    {
+      "id": 10,
+      "city_id": 1,
+      "plant_id": 10,
+      "start_date": "2000-04-10",
+      "end_date": "2000-04-28"
+    },
+    {
+      "id": 11,
+      "city_id": 1,
+      "plant_id": 11,
+      "start_date": "2000-04-18",
+      "end_date": "2000-05-02"
+    },
+    {
+      "id": 12,
+      "city_id": 1,
+      "plant_id": 12,
+      "start_date": "2000-04-28",
+      "end_date": "2000-05-15"
+    },
+    {
+      "id": 13,
+      "city_id": 1,
+      "plant_id": 13,
+      "start_date": "2000-04-21",
+      "end_date": "2000-05-10"
+    },
+    {
+      "id": 14,
+      "city_id": 1,
+      "plant_id": 14,
+      "start_date": "2000-05-10",
+      "end_date": "2000-05-20"
+    },
+    {
+      "id": 15,
+      "city_id": 1,
+      "plant_id": 15,
+      "start_date": "2000-04-30",
+      "end_date": "2000-05-26"
+    },
+    {
+      "id": 16,
+      "city_id": 1,
+      "plant_id": 16,
+      "start_date": "2000-05-22",
+      "end_date": "2000-08-10"
+    },
+    {
+      "id": 17,
+      "city_id": 1,
+      "plant_id": 17,
+      "start_date": "2000-05-31",
+      "end_date": "2000-09-10"
+    },
+    {
+      "id": 18,
+      "city_id": 1,
+      "plant_id": 18,
+      "start_date": "2000-06-05",
+      "end_date": "2000-08-15"
+    },
+    {
+      "id": 19,
+      "city_id": 1,
+      "plant_id": 19,
+      "start_date": "2000-05-26",
+      "end_date": "2000-07-31"
+    },
+    {
+      "id": 20,
+      "city_id": 1,
+      "plant_id": 20,
+      "start_date": "2000-05-15",
+      "end_date": "2000-06-05"
+    },
+    {
+      "id": 21,
+      "city_id": 1,
+      "plant_id": 21,
+      "start_date": "2000-06-10",
+      "end_date": "2000-06-25"
+    },
+    {
+      "id": 22,
+      "city_id": 1,
+      "plant_id": 22,
+      "start_date": "2000-06-15",
+      "end_date": "2000-07-26"
+    },
+    {
+      "id": 23,
+      "city_id": 1,
+      "plant_id": 23,
+      "start_date": "2000-05-31",
+      "end_date": "2000-08-21"
+    },
+    {
+      "id": 24,
+      "city_id": 1,
+      "plant_id": 24,
+      "start_date": "2000-06-05",
+      "end_date": "2000-09-20"
+    },
+    {
+      "id": 25,
+      "city_id": 1,
+      "plant_id": 25,
+      "start_date": "2000-07-15",
+      "end_date": "2000-08-05"
+    },
+    {
+      "id": 26,
+      "city_id": 1,
+      "plant_id": 26,
+      "start_date": "2000-07-05",
+      "end_date": "2000-09-05"
+    },
+    {
+      "id": 27,
+      "city_id": 1,
+      "plant_id": 27,
+      "start_date": "2000-07-10",
+      "end_date": "2000-08-31"
+    },
+    {
+      "id": 28,
+      "city_id": 1,
+      "plant_id": 28,
+      "start_date": "2000-07-05",
+      "end_date": "2000-09-10"
+    },
+    {
+      "id": 29,
+      "city_id": 1,
+      "plant_id": 29,
+      "start_date": "2000-06-30",
+      "end_date": "2000-08-26"
+    },
+    {
+      "id": 30,
+      "city_id": 1,
+      "plant_id": 30,
+      "start_date": "2000-05-10",
+      "end_date": "2000-09-10"
+    },
+    {
+      "id": 31,
+      "city_id": 1,
+      "plant_id": 31,
+      "start_date": "2000-07-31",
+      "end_date": "2000-09-25"
+    },
+    {
+      "id": 32,
+      "city_id": 1,
+      "plant_id": 32,
+      "start_date": "2000-06-10",
+      "end_date": "2000-09-05"
+    },
+    {
+      "id": 33,
+      "city_id": 1,
+      "plant_id": 33,
+      "start_date": "2000-08-26",
+      "end_date": "2000-10-15"
+    },
+    {
+      "id": 34,
+      "city_id": 1,
+      "plant_id": 34,
+      "start_date": "2000-07-15",
+      "end_date": "2000-09-30"
+    },
+    {
+      "id": 35,
+      "city_id": 1,
+      "plant_id": 35,
+      "start_date": "2000-09-08",
+      "end_date": "2000-10-12"
+    },
+    {
+      "id": 36,
+      "city_id": 2,
+      "plant_id": 1,
+      "start_date": "2000-03-19",
+      "end_date": "2000-03-31"
+    },
+    {
+      "id": 37,
+      "city_id": 2,
+      "plant_id": 2,
+      "start_date": "2000-03-29",
+      "end_date": "2000-04-12"
+    },
+    {
+      "id": 38,
+      "city_id": 2,
+      "plant_id": 3,
+      "start_date": "2000-03-27",
+      "end_date": "2000-04-10"
+    },
+    {
+      "id": 39,
+      "city_id": 2,
+      "plant_id": 4,
+      "start_date": "2000-03-31",
+      "end_date": "2000-04-14"
+    },
+    {
+      "id": 40,
+      "city_id": 2,
+      "plant_id": 5,
+      "start_date": "2000-04-24",
+      "end_date": "2000-05-08"
+    },
+    {
+      "id": 41,
+      "city_id": 2,
+      "plant_id": 6,
+      "start_date": "2000-04-16",
+      "end_date": "2000-04-30"
+    },
+    {
+      "id": 42,
+      "city_id": 2,
+      "plant_id": 7,
+      "start_date": "2000-04-17",
+      "end_date": "2000-05-01"
+    },
+    {
+      "id": 43,
+      "city_id": 2,
+      "plant_id": 8,
+      "start_date": "2000-04-12",
+      "end_date": "2000-04-26"
+    },
+    {
+      "id": 44,
+      "city_id": 2,
+      "plant_id": 9,
+      "start_date": "2000-04-11",
+      "end_date": "2000-05-03"
+    },
+    {
+      "id": 45,
+      "city_id": 2,
+      "plant_id": 10,
+      "start_date": "2000-04-08",
+      "end_date": "2000-04-26"
+    },
+    {
+      "id": 46,
+      "city_id": 2,
+      "plant_id": 11,
+      "start_date": "2000-04-16",
+      "end_date": "2000-04-30"
+    },
+    {
+      "id": 47,
+      "city_id": 2,
+      "plant_id": 12,
+      "start_date": "2000-04-26",
+      "end_date": "2000-05-13"
+    },
+    {
+      "id": 48,
+      "city_id": 2,
+      "plant_id": 13,
+      "start_date": "2000-04-19",
+      "end_date": "2000-05-08"
+    },
+    {
+      "id": 49,
+      "city_id": 2,
+      "plant_id": 14,
+      "start_date": "2000-05-08",
+      "end_date": "2000-05-18"
+    },
+    {
+      "id": 50,
+      "city_id": 2,
+      "plant_id": 15,
+      "start_date": "2000-04-28",
+      "end_date": "2000-05-24"
+    },
+    {
+      "id": 51,
+      "city_id": 2,
+      "plant_id": 16,
+      "start_date": "2000-05-20",
+      "end_date": "2000-08-08"
+    },
+    {
+      "id": 52,
+      "city_id": 2,
+      "plant_id": 17,
+      "start_date": "2000-05-29",
+      "end_date": "2000-09-08"
+    },
+    {
+      "id": 53,
+      "city_id": 2,
+      "plant_id": 18,
+      "start_date": "2000-06-03",
+      "end_date": "2000-08-13"
+    },
+    {
+      "id": 54,
+      "city_id": 2,
+      "plant_id": 19,
+      "start_date": "2000-05-24",
+      "end_date": "2000-07-29"
+    },
+    {
+      "id": 55,
+      "city_id": 2,
+      "plant_id": 20,
+      "start_date": "2000-05-13",
+      "end_date": "2000-06-03"
+    },
+    {
+      "id": 56,
+      "city_id": 2,
+      "plant_id": 21,
+      "start_date": "2000-06-08",
+      "end_date": "2000-06-23"
+    },
+    {
+      "id": 57,
+      "city_id": 2,
+      "plant_id": 22,
+      "start_date": "2000-06-13",
+      "end_date": "2000-07-24"
+    },
+    {
+      "id": 58,
+      "city_id": 2,
+      "plant_id": 23,
+      "start_date": "2000-05-29",
+      "end_date": "2000-08-19"
+    },
+    {
+      "id": 59,
+      "city_id": 2,
+      "plant_id": 24,
+      "start_date": "2000-06-03",
+      "end_date": "2000-09-18"
+    },
+    {
+      "id": 60,
+      "city_id": 2,
+      "plant_id": 25,
+      "start_date": "2000-07-13",
+      "end_date": "2000-08-03"
+    },
+    {
+      "id": 61,
+      "city_id": 2,
+      "plant_id": 26,
+      "start_date": "2000-07-03",
+      "end_date": "2000-09-03"
+    },
+    {
+      "id": 62,
+      "city_id": 2,
+      "plant_id": 27,
+      "start_date": "2000-07-08",
+      "end_date": "2000-08-29"
+    },
+    {
+      "id": 63,
+      "city_id": 2,
+      "plant_id": 28,
+      "start_date": "2000-07-03",
+      "end_date": "2000-09-08"
+    },
+    {
+      "id": 64,
+      "city_id": 2,
+      "plant_id": 29,
+      "start_date": "2000-06-28",
+      "end_date": "2000-08-24"
+    },
+    {
+      "id": 65,
+      "city_id": 2,
+      "plant_id": 30,
+      "start_date": "2000-05-08",
+      "end_date": "2000-09-08"
+    },
+    {
+      "id": 66,
+      "city_id": 2,
+      "plant_id": 31,
+      "start_date": "2000-07-29",
+      "end_date": "2000-09-23"
+    },
+    {
+      "id": 67,
+      "city_id": 2,
+      "plant_id": 32,
+      "start_date": "2000-06-08",
+      "end_date": "2000-09-03"
+    },
+    {
+      "id": 68,
+      "city_id": 2,
+      "plant_id": 33,
+      "start_date": "2000-08-24",
+      "end_date": "2000-10-13"
+    },
+    {
+      "id": 69,
+      "city_id": 2,
+      "plant_id": 34,
+      "start_date": "2000-07-13",
+      "end_date": "2000-09-28"
+    },
+    {
+      "id": 70,
+      "city_id": 2,
+      "plant_id": 35,
+      "start_date": "2000-09-09",
+      "end_date": "2000-10-13"
+    },
+    {
+      "id": 71,
+      "city_id": 3,
+      "plant_id": 1,
+      "start_date": "2000-03-11",
+      "end_date": "2000-03-23"
+    },
+    {
+      "id": 72,
+      "city_id": 3,
+      "plant_id": 2,
+      "start_date": "2000-03-21",
+      "end_date": "2000-04-04"
+    },
+    {
+      "id": 73,
+      "city_id": 3,
+      "plant_id": 3,
+      "start_date": "2000-03-19",
+      "end_date": "2000-04-02"
+    },
+    {
+      "id": 74,
+      "city_id": 3,
+      "plant_id": 4,
+      "start_date": "2000-03-23",
+      "end_date": "2000-04-06"
+    },
+    {
+      "id": 75,
+      "city_id": 3,
+      "plant_id": 5,
+      "start_date": "2000-04-16",
+      "end_date": "2000-04-30"
+    },
+    {
+      "id": 76,
+      "city_id": 3,
+      "plant_id": 6,
+      "start_date": "2000-04-08",
+      "end_date": "2000-04-22"
+    },
+    {
+      "id": 77,
+      "city_id": 3,
+      "plant_id": 7,
+      "start_date": "2000-04-09",
+      "end_date": "2000-04-23"
+    },
+    {
+      "id": 78,
+      "city_id": 3,
+      "plant_id": 8,
+      "start_date": "2000-04-04",
+      "end_date": "2000-04-18"
+    },
+    {
+      "id": 79,
+      "city_id": 3,
+      "plant_id": 9,
+      "start_date": "2000-04-03",
+      "end_date": "2000-04-25"
+    },
+    {
+      "id": 80,
+      "city_id": 3,
+      "plant_id": 10,
+      "start_date": "2000-03-31",
+      "end_date": "2000-04-18"
+    },
+    {
+      "id": 81,
+      "city_id": 3,
+      "plant_id": 11,
+      "start_date": "2000-04-08",
+      "end_date": "2000-04-22"
+    },
+    {
+      "id": 82,
+      "city_id": 3,
+      "plant_id": 12,
+      "start_date": "2000-04-18",
+      "end_date": "2000-05-05"
+    },
+    {
+      "id": 83,
+      "city_id": 3,
+      "plant_id": 13,
+      "start_date": "2000-04-11",
+      "end_date": "2000-04-30"
+    },
+    {
+      "id": 84,
+      "city_id": 3,
+      "plant_id": 14,
+      "start_date": "2000-04-30",
+      "end_date": "2000-05-10"
+    },
+    {
+      "id": 85,
+      "city_id": 3,
+      "plant_id": 15,
+      "start_date": "2000-04-20",
+      "end_date": "2000-05-16"
+    },
+    {
+      "id": 86,
+      "city_id": 3,
+      "plant_id": 16,
+      "start_date": "2000-05-12",
+      "end_date": "2000-07-31"
+    },
+    {
+      "id": 87,
+      "city_id": 3,
+      "plant_id": 17,
+      "start_date": "2000-05-21",
+      "end_date": "2000-08-31"
+    },
+    {
+      "id": 88,
+      "city_id": 3,
+      "plant_id": 18,
+      "start_date": "2000-05-26",
+      "end_date": "2000-08-05"
+    },
+    {
+      "id": 89,
+      "city_id": 3,
+      "plant_id": 19,
+      "start_date": "2000-05-16",
+      "end_date": "2000-07-21"
+    },
+    {
+      "id": 90,
+      "city_id": 3,
+      "plant_id": 20,
+      "start_date": "2000-05-05",
+      "end_date": "2000-05-26"
+    },
+    {
+      "id": 91,
+      "city_id": 3,
+      "plant_id": 21,
+      "start_date": "2000-05-31",
+      "end_date": "2000-06-15"
+    },
+    {
+      "id": 92,
+      "city_id": 3,
+      "plant_id": 22,
+      "start_date": "2000-06-05",
+      "end_date": "2000-07-16"
+    },
+    {
+      "id": 93,
+      "city_id": 3,
+      "plant_id": 23,
+      "start_date": "2000-05-21",
+      "end_date": "2000-08-11"
+    },
+    {
+      "id": 94,
+      "city_id": 3,
+      "plant_id": 24,
+      "start_date": "2000-05-26",
+      "end_date": "2000-09-10"
+    },
+    {
+      "id": 95,
+      "city_id": 3,
+      "plant_id": 25,
+      "start_date": "2000-07-05",
+      "end_date": "2000-07-26"
+    },
+    {
+      "id": 96,
+      "city_id": 3,
+      "plant_id": 26,
+      "start_date": "2000-06-25",
+      "end_date": "2000-08-26"
+    },
+    {
+      "id": 97,
+      "city_id": 3,
+      "plant_id": 27,
+      "start_date": "2000-06-30",
+      "end_date": "2000-08-21"
+    },
+    {
+      "id": 98,
+      "city_id": 3,
+      "plant_id": 28,
+      "start_date": "2000-06-25",
+      "end_date": "2000-08-31"
+    },
+    {
+      "id": 99,
+      "city_id": 3,
+      "plant_id": 29,
+      "start_date": "2000-06-20",
+      "end_date": "2000-08-16"
+    },
+    {
+      "id": 100,
+      "city_id": 3,
+      "plant_id": 30,
+      "start_date": "2000-04-30",
+      "end_date": "2000-08-31"
+    },
+    {
+      "id": 101,
+      "city_id": 3,
+      "plant_id": 31,
+      "start_date": "2000-07-21",
+      "end_date": "2000-09-15"
+    },
+    {
+      "id": 102,
+      "city_id": 3,
+      "plant_id": 32,
+      "start_date": "2000-05-31",
+      "end_date": "2000-08-26"
+    },
+    {
+      "id": 103,
+      "city_id": 3,
+      "plant_id": 33,
+      "start_date": "2000-08-16",
+      "end_date": "2000-10-05"
+    },
+    {
+      "id": 104,
+      "city_id": 3,
+      "plant_id": 34,
+      "start_date": "2000-07-05",
+      "end_date": "2000-09-20"
+    },
+    {
+      "id": 105,
+      "city_id": 3,
+      "plant_id": 35,
+      "start_date": "2000-09-15",
+      "end_date": "2000-10-19"
+    },
+    {
+      "id": 106,
+      "city_id": 4,
+      "plant_id": 1,
+      "start_date": "2000-03-25",
+      "end_date": "2000-04-06"
+    },
+    {
+      "id": 107,
+      "city_id": 4,
+      "plant_id": 2,
+      "start_date": "2000-04-04",
+      "end_date": "2000-04-18"
+    },
+    {
+      "id": 108,
+      "city_id": 4,
+      "plant_id": 3,
+      "start_date": "2000-04-02",
+      "end_date": "2000-04-16"
+    },
+    {
+      "id": 109,
+      "city_id": 4,
+      "plant_id": 4,
+      "start_date": "2000-04-06",
+      "end_date": "2000-04-20"
+    },
+    {
+      "id": 110,
+      "city_id": 4,
+      "plant_id": 5,
+      "start_date": "2000-04-30",
+      "end_date": "2000-05-14"
+    },
+    {
+      "id": 111,
+      "city_id": 4,
+      "plant_id": 6,
+      "start_date": "2000-04-22",
+      "end_date": "2000-05-06"
+    },
+    {
+      "id": 112,
+      "city_id": 4,
+      "plant_id": 7,
+      "start_date": "2000-04-23",
+      "end_date": "2000-05-07"
+    },
+    {
+      "id": 113,
+      "city_id": 4,
+      "plant_id": 8,
+      "start_date": "2000-04-18",
+      "end_date": "2000-05-02"
+    },
+    {
+      "id": 114,
+      "city_id": 4,
+      "plant_id": 9,
+      "start_date": "2000-04-17",
+      "end_date": "2000-05-09"
+    },
+    {
+      "id": 115,
+      "city_id": 4,
+      "plant_id": 10,
+      "start_date": "2000-04-14",
+      "end_date": "2000-05-02"
+    },
+    {
+      "id": 116,
+      "city_id": 4,
+      "plant_id": 11,
+      "start_date": "2000-04-22",
+      "end_date": "2000-05-06"
+    },
+    {
+      "id": 117,
+      "city_id": 4,
+      "plant_id": 12,
+      "start_date": "2000-05-02",
+      "end_date": "2000-05-19"
+    },
+    {
+      "id": 118,
+      "city_id": 4,
+      "plant_id": 13,
+      "start_date": "2000-04-25",
+      "end_date": "2000-05-14"
+    },
+    {
+      "id": 119,
+      "city_id": 4,
+      "plant_id": 14,
+      "start_date": "2000-05-14",
+      "end_date": "2000-05-24"
+    },
+    {
+      "id": 120,
+      "city_id": 4,
+      "plant_id": 15,
+      "start_date": "2000-05-04",
+      "end_date": "2000-05-30"
+    },
+    {
+      "id": 121,
+      "city_id": 4,
+      "plant_id": 16,
+      "start_date": "2000-05-26",
+      "end_date": "2000-08-14"
+    },
+    {
+      "id": 122,
+      "city_id": 4,
+      "plant_id": 17,
+      "start_date": "2000-06-04",
+      "end_date": "2000-09-14"
+    },
+    {
+      "id": 123,
+      "city_id": 4,
+      "plant_id": 18,
+      "start_date": "2000-06-09",
+      "end_date": "2000-08-19"
+    },
+    {
+      "id": 124,
+      "city_id": 4,
+      "plant_id": 19,
+      "start_date": "2000-05-30",
+      "end_date": "2000-08-04"
+    },
+    {
+      "id": 125,
+      "city_id": 4,
+      "plant_id": 20,
+      "start_date": "2000-05-19",
+      "end_date": "2000-06-09"
+    },
+    {
+      "id": 126,
+      "city_id": 4,
+      "plant_id": 21,
+      "start_date": "2000-06-14",
+      "end_date": "2000-06-29"
+    },
+    {
+      "id": 127,
+      "city_id": 4,
+      "plant_id": 22,
+      "start_date": "2000-06-19",
+      "end_date": "2000-07-30"
+    },
+    {
+      "id": 128,
+      "city_id": 4,
+      "plant_id": 23,
+      "start_date": "2000-06-04",
+      "end_date": "2000-08-25"
+    },
+    {
+      "id": 129,
+      "city_id": 4,
+      "plant_id": 24,
+      "start_date": "2000-06-09",
+      "end_date": "2000-09-24"
+    },
+    {
+      "id": 130,
+      "city_id": 4,
+      "plant_id": 25,
+      "start_date": "2000-07-19",
+      "end_date": "2000-08-09"
+    },
+    {
+      "id": 131,
+      "city_id": 4,
+      "plant_id": 26,
+      "start_date": "2000-07-09",
+      "end_date": "2000-09-09"
+    },
+    {
+      "id": 132,
+      "city_id": 4,
+      "plant_id": 27,
+      "start_date": "2000-07-14",
+      "end_date": "2000-09-04"
+    },
+    {
+      "id": 133,
+      "city_id": 4,
+      "plant_id": 28,
+      "start_date": "2000-07-09",
+      "end_date": "2000-09-14"
+    },
+    {
+      "id": 134,
+      "city_id": 4,
+      "plant_id": 29,
+      "start_date": "2000-07-04",
+      "end_date": "2000-08-30"
+    },
+    {
+      "id": 135,
+      "city_id": 4,
+      "plant_id": 30,
+      "start_date": "2000-05-14",
+      "end_date": "2000-09-14"
+    },
+    {
+      "id": 136,
+      "city_id": 4,
+      "plant_id": 31,
+      "start_date": "2000-08-04",
+      "end_date": "2000-09-29"
+    },
+    {
+      "id": 137,
+      "city_id": 4,
+      "plant_id": 32,
+      "start_date": "2000-06-14",
+      "end_date": "2000-09-09"
+    },
+    {
+      "id": 138,
+      "city_id": 4,
+      "plant_id": 33,
+      "start_date": "2000-08-30",
+      "end_date": "2000-10-19"
+    },
+    {
+      "id": 139,
+      "city_id": 4,
+      "plant_id": 34,
+      "start_date": "2000-07-19",
+      "end_date": "2000-10-04"
+    },
+    {
+      "id": 140,
+      "city_id": 4,
+      "plant_id": 35,
+      "start_date": "2000-09-05",
+      "end_date": "2000-10-08"
+    },
+    {
+      "id": 141,
+      "city_id": 5,
+      "plant_id": 1,
+      "start_date": "2000-03-12",
+      "end_date": "2000-03-24"
+    },
+    {
+      "id": 142,
+      "city_id": 5,
+      "plant_id": 2,
+      "start_date": "2000-03-22",
+      "end_date": "2000-04-05"
+    },
+    {
+      "id": 143,
+      "city_id": 5,
+      "plant_id": 3,
+      "start_date": "2000-03-20",
+      "end_date": "2000-04-03"
+    },
+    {
+      "id": 144,
+      "city_id": 5,
+      "plant_id": 4,
+      "start_date": "2000-03-24",
+      "end_date": "2000-04-07"
+    },
+    {
+      "id": 145,
+      "city_id": 5,
+      "plant_id": 5,
+      "start_date": "2000-04-17",
+      "end_date": "2000-05-01"
+    },
+    {
+      "id": 146,
+      "city_id": 5,
+      "plant_id": 6,
+      "start_date": "2000-04-09",
+      "end_date": "2000-04-23"
+    },
+    {
+      "id": 147,
+      "city_id": 5,
+      "plant_id": 7,
+      "start_date": "2000-04-10",
+      "end_date": "2000-04-24"
+    },
+    {
+      "id": 148,
+      "city_id": 5,
+      "plant_id": 8,
+      "start_date": "2000-04-05",
+      "end_date": "2000-04-19"
+    },
+    {
+      "id": 149,
+      "city_id": 5,
+      "plant_id": 9,
+      "start_date": "2000-04-04",
+      "end_date": "2000-04-26"
+    },
+    {
+      "id": 150,
+      "city_id": 5,
+      "plant_id": 10,
+      "start_date": "2000-04-01",
+      "end_date": "2000-04-19"
+    },
+    {
+      "id": 151,
+      "city_id": 5,
+      "plant_id": 11,
+      "start_date": "2000-04-09",
+      "end_date": "2000-04-23"
+    },
+    {
+      "id": 152,
+      "city_id": 5,
+      "plant_id": 12,
+      "start_date": "2000-04-19",
+      "end_date": "2000-05-06"
+    },
+    {
+      "id": 153,
+      "city_id": 5,
+      "plant_id": 13,
+      "start_date": "2000-04-12",
+      "end_date": "2000-05-01"
+    },
+    {
+      "id": 154,
+      "city_id": 5,
+      "plant_id": 14,
+      "start_date": "2000-05-01",
+      "end_date": "2000-05-11"
+    },
+    {
+      "id": 155,
+      "city_id": 5,
+      "plant_id": 15,
+      "start_date": "2000-04-21",
+      "end_date": "2000-05-17"
+    },
+    {
+      "id": 156,
+      "city_id": 5,
+      "plant_id": 16,
+      "start_date": "2000-05-13",
+      "end_date": "2000-08-01"
+    },
+    {
+      "id": 157,
+      "city_id": 5,
+      "plant_id": 17,
+      "start_date": "2000-05-22",
+      "end_date": "2000-09-01"
+    },
+    {
+      "id": 158,
+      "city_id": 5,
+      "plant_id": 18,
+      "start_date": "2000-05-27",
+      "end_date": "2000-08-06"
+    },
+    {
+      "id": 159,
+      "city_id": 5,
+      "plant_id": 19,
+      "start_date": "2000-05-17",
+      "end_date": "2000-07-22"
+    },
+    {
+      "id": 160,
+      "city_id": 5,
+      "plant_id": 20,
+      "start_date": "2000-05-06",
+      "end_date": "2000-05-27"
+    },
+    {
+      "id": 161,
+      "city_id": 5,
+      "plant_id": 21,
+      "start_date": "2000-06-01",
+      "end_date": "2000-06-16"
+    },
+    {
+      "id": 162,
+      "city_id": 5,
+      "plant_id": 22,
+      "start_date": "2000-06-06",
+      "end_date": "2000-07-17"
+    },
+    {
+      "id": 163,
+      "city_id": 5,
+      "plant_id": 23,
+      "start_date": "2000-05-22",
+      "end_date": "2000-08-12"
+    },
+    {
+      "id": 164,
+      "city_id": 5,
+      "plant_id": 24,
+      "start_date": "2000-05-27",
+      "end_date": "2000-09-11"
+    },
+    {
+      "id": 165,
+      "city_id": 5,
+      "plant_id": 25,
+      "start_date": "2000-07-06",
+      "end_date": "2000-07-27"
+    },
+    {
+      "id": 166,
+      "city_id": 5,
+      "plant_id": 26,
+      "start_date": "2000-06-26",
+      "end_date": "2000-08-27"
+    },
+    {
+      "id": 167,
+      "city_id": 5,
+      "plant_id": 27,
+      "start_date": "2000-07-01",
+      "end_date": "2000-08-22"
+    },
+    {
+      "id": 168,
+      "city_id": 5,
+      "plant_id": 28,
+      "start_date": "2000-06-26",
+      "end_date": "2000-09-01"
+    },
+    {
+      "id": 169,
+      "city_id": 5,
+      "plant_id": 29,
+      "start_date": "2000-06-21",
+      "end_date": "2000-08-17"
+    },
+    {
+      "id": 170,
+      "city_id": 5,
+      "plant_id": 30,
+      "start_date": "2000-05-01",
+      "end_date": "2000-09-01"
+    },
+    {
+      "id": 171,
+      "city_id": 5,
+      "plant_id": 31,
+      "start_date": "2000-07-22",
+      "end_date": "2000-09-16"
+    },
+    {
+      "id": 172,
+      "city_id": 5,
+      "plant_id": 32,
+      "start_date": "2000-06-01",
+      "end_date": "2000-08-27"
+    },
+    {
+      "id": 173,
+      "city_id": 5,
+      "plant_id": 33,
+      "start_date": "2000-08-17",
+      "end_date": "2000-10-06"
+    },
+    {
+      "id": 174,
+      "city_id": 5,
+      "plant_id": 34,
+      "start_date": "2000-07-06",
+      "end_date": "2000-09-21"
+    },
+    {
+      "id": 175,
+      "city_id": 5,
+      "plant_id": 35,
+      "start_date": "2000-09-14",
+      "end_date": "2000-10-18"
+    },
+    {
+      "id": 176,
+      "city_id": 6,
+      "plant_id": 1,
+      "start_date": "2000-03-23",
+      "end_date": "2000-04-04"
+    },
+    {
+      "id": 177,
+      "city_id": 6,
+      "plant_id": 2,
+      "start_date": "2000-04-02",
+      "end_date": "2000-04-16"
+    },
+    {
+      "id": 178,
+      "city_id": 6,
+      "plant_id": 3,
+      "start_date": "2000-03-31",
+      "end_date": "2000-04-14"
+    },
+    {
+      "id": 179,
+      "city_id": 6,
+      "plant_id": 4,
+      "start_date": "2000-04-04",
+      "end_date": "2000-04-18"
+    },
+    {
+      "id": 180,
+      "city_id": 6,
+      "plant_id": 5,
+      "start_date": "2000-04-28",
+      "end_date": "2000-05-12"
+    },
+    {
+      "id": 181,
+      "city_id": 6,
+      "plant_id": 6,
+      "start_date": "2000-04-20",
+      "end_date": "2000-05-04"
+    },
+    {
+      "id": 182,
+      "city_id": 6,
+      "plant_id": 7,
+      "start_date": "2000-04-21",
+      "end_date": "2000-05-05"
+    },
+    {
+      "id": 183,
+      "city_id": 6,
+      "plant_id": 8,
+      "start_date": "2000-04-16",
+      "end_date": "2000-04-30"
+    },
+    {
+      "id": 184,
+      "city_id": 6,
+      "plant_id": 9,
+      "start_date": "2000-04-15",
+      "end_date": "2000-05-07"
+    },
+    {
+      "id": 185,
+      "city_id": 6,
+      "plant_id": 10,
+      "start_date": "2000-04-12",
+      "end_date": "2000-04-30"
+    },
+    {
+      "id": 186,
+      "city_id": 6,
+      "plant_id": 11,
+      "start_date": "2000-04-20",
+      "end_date": "2000-05-04"
+    },
+    {
+      "id": 187,
+      "city_id": 6,
+      "plant_id": 12,
+      "start_date": "2000-04-30",
+      "end_date": "2000-05-17"
+    },
+    {
+      "id": 188,
+      "city_id": 6,
+      "plant_id": 13,
+      "start_date": "2000-04-23",
+      "end_date": "2000-05-12"
+    },
+    {
+      "id": 189,
+      "city_id": 6,
+      "plant_id": 14,
+      "start_date": "2000-05-12",
+      "end_date": "2000-05-22"
+    },
+    {
+      "id": 190,
+      "city_id": 6,
+      "plant_id": 15,
+      "start_date": "2000-05-02",
+      "end_date": "2000-05-28"
+    },
+    {
+      "id": 191,
+      "city_id": 6,
+      "plant_id": 16,
+      "start_date": "2000-05-24",
+      "end_date": "2000-08-12"
+    },
+    {
+      "id": 192,
+      "city_id": 6,
+      "plant_id": 17,
+      "start_date": "2000-06-02",
+      "end_date": "2000-09-12"
+    },
+    {
+      "id": 193,
+      "city_id": 6,
+      "plant_id": 18,
+      "start_date": "2000-06-07",
+      "end_date": "2000-08-17"
+    },
+    {
+      "id": 194,
+      "city_id": 6,
+      "plant_id": 19,
+      "start_date": "2000-05-28",
+      "end_date": "2000-08-02"
+    },
+    {
+      "id": 195,
+      "city_id": 6,
+      "plant_id": 20,
+      "start_date": "2000-05-17",
+      "end_date": "2000-06-07"
+    },
+    {
+      "id": 196,
+      "city_id": 6,
+      "plant_id": 21,
+      "start_date": "2000-06-12",
+      "end_date": "2000-06-27"
+    },
+    {
+      "id": 197,
+      "city_id": 6,
+      "plant_id": 22,
+      "start_date": "2000-06-17",
+      "end_date": "2000-07-28"
+    },
+    {
+      "id": 198,
+      "city_id": 6,
+      "plant_id": 23,
+      "start_date": "2000-06-02",
+      "end_date": "2000-08-23"
+    },
+    {
+      "id": 199,
+      "city_id": 6,
+      "plant_id": 24,
+      "start_date": "2000-06-07",
+      "end_date": "2000-09-22"
+    },
+    {
+      "id": 200,
+      "city_id": 6,
+      "plant_id": 25,
+      "start_date": "2000-07-17",
+      "end_date": "2000-08-07"
+    },
+    {
+      "id": 201,
+      "city_id": 6,
+      "plant_id": 26,
+      "start_date": "2000-07-07",
+      "end_date": "2000-09-07"
+    },
+    {
+      "id": 202,
+      "city_id": 6,
+      "plant_id": 27,
+      "start_date": "2000-07-12",
+      "end_date": "2000-09-02"
+    },
+    {
+      "id": 203,
+      "city_id": 6,
+      "plant_id": 28,
+      "start_date": "2000-07-07",
+      "end_date": "2000-09-12"
+    },
+    {
+      "id": 204,
+      "city_id": 6,
+      "plant_id": 29,
+      "start_date": "2000-07-02",
+      "end_date": "2000-08-28"
+    },
+    {
+      "id": 205,
+      "city_id": 6,
+      "plant_id": 30,
+      "start_date": "2000-05-12",
+      "end_date": "2000-09-12"
+    },
+    {
+      "id": 206,
+      "city_id": 6,
+      "plant_id": 31,
+      "start_date": "2000-08-02",
+      "end_date": "2000-09-27"
+    },
+    {
+      "id": 207,
+      "city_id": 6,
+      "plant_id": 32,
+      "start_date": "2000-06-12",
+      "end_date": "2000-09-07"
+    },
+    {
+      "id": 208,
+      "city_id": 6,
+      "plant_id": 33,
+      "start_date": "2000-08-28",
+      "end_date": "2000-10-17"
+    },
+    {
+      "id": 209,
+      "city_id": 6,
+      "plant_id": 34,
+      "start_date": "2000-07-17",
+      "end_date": "2000-10-02"
+    },
+    {
+      "id": 210,
+      "city_id": 6,
+      "plant_id": 35,
+      "start_date": "2000-09-07",
+      "end_date": "2000-10-11"
+    },
+    {
+      "id": 211,
+      "city_id": 1,
+      "plant_id": 36,
+      "start_date": "2000-04-05",
+      "end_date": "2000-04-18"
+    },
+    {
+      "id": 212,
+      "city_id": 2,
+      "plant_id": 36,
+      "start_date": "2000-04-03",
+      "end_date": "2000-04-16"
+    },
+    {
+      "id": 213,
+      "city_id": 3,
+      "plant_id": 36,
+      "start_date": "2000-03-26",
+      "end_date": "2000-04-08"
+    },
+    {
+      "id": 214,
+      "city_id": 4,
+      "plant_id": 36,
+      "start_date": "2000-04-09",
+      "end_date": "2000-04-22"
+    },
+    {
+      "id": 215,
+      "city_id": 5,
+      "plant_id": 36,
+      "start_date": "2000-03-27",
+      "end_date": "2000-04-09"
+    },
+    {
+      "id": 216,
+      "city_id": 6,
+      "plant_id": 36,
+      "start_date": "2000-04-07",
+      "end_date": "2000-04-20"
+    }
+  ]
+}
