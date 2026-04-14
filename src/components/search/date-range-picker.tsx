@@ -116,6 +116,16 @@ export function DateRangePicker({ value, onChange, placeholder = "Когда" }:
               chevron: "fill-[#a64ac9]",
             }}
           />
+          <div className="flex justify-end pt-2 border-t border-divider mt-2">
+            <button
+              type="button"
+              onClick={() => setOpen(false)}
+              disabled={!value?.from}
+              className="px-4 py-1.5 text-xs font-bold rounded-md bg-[#a64ac9] text-white hover:bg-[#8e3ab5] disabled:bg-accent-disabled disabled:cursor-not-allowed"
+            >
+              Применить
+            </button>
+          </div>
         </div>
       )}
     </div>
