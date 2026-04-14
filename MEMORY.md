@@ -87,7 +87,18 @@
 - overflow-visible на контейнере полей, чтобы dropdown не обрезался
 - Фикс: npm rebuild better-sqlite3 при несовпадении NODE_MODULE_VERSION
 
-## Следующий этап: 12 — Реальный поиск на главной
+### Этап 12. Реальный поиск на главной
+- HeroSearch теперь рендерит ВСЮ hero-секцию (Logo, заголовок, ModeToggle, SearchBar) + секцию результатов под ней (вне hero, на bg-surface-soft) — чтобы сдвигать "Сейчас цветет" вниз и не тащить page.tsx в client. page.tsx упрощён: `<HeroSearch />` + секция "Сейчас цветет"
+- Кнопка "Найти цветы" вызывает `searchAction(mode, slug, startDate, endDate)` (server action из этапа 7); даты конвертируются в ISO `yyyy-MM-dd` через date-fns `format`
+- Состояние в HeroSearch: `results: SearchResult | null`, `isLoading`, `errorMessage`
+- Inline-сообщение об ошибке (white/80 пилюля под SearchBar) если: не выбран slug из autocomplete, не выбран диапазон дат, или поиск упал. Сбрасывается при изменении любого поля или смене режима
+- Кнопка disabled пока isLoading, текст меняется на "Поиск..."
+- При смене режима результаты сбрасываются (results=null)
+- src/components/search/search-results.tsx — простой список (имя + регион/латинское + диапазон цветения форматированный date-fns "d MMM"), пустое состояние "Ничего не найдено..."
+- Красивые карточки результатов — отложены на этап 13
+- SearchBar получил пропсы `onSearch` и `isLoading`
+
+## Следующий этап: 13 — Карточки результатов
 
 ## Важные решения
 - Логотип — SVG-цветок в компоненте, не эмодзи

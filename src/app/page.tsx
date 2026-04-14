@@ -1,5 +1,4 @@
 import { Container } from "@/components/container";
-import { Logo } from "@/components/logo";
 import { HeroSearch } from "@/components/search/hero-search";
 import { PlantBloomCard } from "@/components/cards/plant-bloom-card";
 
@@ -13,23 +12,8 @@ const mockBlooming = [
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col">
-      {/* Hero section */}
-      <section className="bg-hero px-4 pb-12 pt-6">
-        {/* Logo */}
-        <div className="mb-16">
-          <Logo />
-        </div>
-
-        <Container className="flex flex-col items-center">
-          {/* Title */}
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-text-primary text-center mb-[75px]">
-            Найди свой цветок
-          </h1>
-
-          {/* Mode toggle & Search bar */}
-          <HeroSearch />
-        </Container>
-      </section>
+      {/* Hero + результаты поиска */}
+      <HeroSearch />
 
       {/* "Сейчас цветет" section */}
       <section className="bg-surface-soft flex-1 px-4 py-10">

@@ -88,11 +88,10 @@ export function Autocomplete({
     (suggestion: Suggestion) => {
       justSelected.current = true;
       onSelect(suggestion);
-      onChange(suggestion.name);
       setIsOpen(false);
       setSuggestions([]);
     },
-    [onSelect, onChange]
+    [onSelect]
   );
 
   const handleKeyDown = (e: React.KeyboardEvent) => {

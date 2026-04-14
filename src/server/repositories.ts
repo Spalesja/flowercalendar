@@ -89,15 +89,23 @@ export function getPlantBySlug(slug: string): Plant | null {
   return row ? toPlant(row) : null;
 }
 
+// Даты цветения хранятся с фиксированным годом-плейсхолдером (2000), т.к. цветение цикличное.
+// Поэтому при поиске сравниваем только MM-DD.
+function toMonthDay(isoDate: string): string {
+  return isoDate.slice(5, 10);
+}
+
 /**
  * Поиск растений по городу и диапазону дат.
- * Правило пересечения: record.start_date <= selectedEnd AND record.end_date >= selectedStart
+ * Правило пересечения (по MM-DD): record.start <= selectedEnd AND record.end >= selectedStart
  */
 export function searchPlantsByCity(
   citySlug: string,
   startDate: string,
   endDate: string
 ): PlantSearchResult[] {
+  const startMD = toMonthDay(startDate);
+  const endMD = toMonthDay(endDate);
   const rows = getDb()
     .prepare(
       `SELECT p.*, fr.start_date, fr.end_date
@@ -105,11 +113,11 @@ export function searchPlantsByCity(
        JOIN plants p ON p.id = fr.plant_id
        JOIN cities c ON c.id = fr.city_id
        WHERE c.slug = ?
-         AND fr.start_date <= ?
-         AND fr.end_date >= ?
+         AND substr(fr.start_date, 6, 5) <= ?
+         AND substr(fr.end_date, 6, 5) >= ?
        ORDER BY fr.start_date`
     )
-    .all(citySlug, endDate, startDate) as PlantWithDatesRow[];
+    .all(citySlug, endMD, startMD) as PlantWithDatesRow[];
 
   return rows.map((row) => ({
     plant: toPlant(row),
@@ -126,6 +134,8 @@ export function searchCitiesByPlant(
   startDate: string,
   endDate: string
 ): CitySearchResult[] {
+  const startMD = toMonthDay(startDate);
+  const endMD = toMonthDay(endDate);
   const rows = getDb()
     .prepare(
       `SELECT c.*, fr.start_date, fr.end_date
@@ -133,11 +143,11 @@ export function searchCitiesByPlant(
        JOIN cities c ON c.id = fr.city_id
        JOIN plants p ON p.id = fr.plant_id
        WHERE p.slug = ?
-         AND fr.start_date <= ?
-         AND fr.end_date >= ?
+         AND substr(fr.start_date, 6, 5) <= ?
+         AND substr(fr.end_date, 6, 5) >= ?
        ORDER BY fr.start_date`
     )
-    .all(plantSlug, endDate, startDate) as CityWithDatesRow[];
+    .all(plantSlug, endMD, startMD) as CityWithDatesRow[];
 
   return rows.map((row) => ({
     city: toCity(row),
@@ -153,6 +163,7 @@ export function getCurrentlyBloomingByCity(
   citySlug: string,
   currentDate: string
 ): PlantSearchResult[] {
+  const md = toMonthDay(currentDate);
   const rows = getDb()
     .prepare(
       `SELECT p.*, fr.start_date, fr.end_date
@@ -160,11 +171,11 @@ export function getCurrentlyBloomingByCity(
        JOIN plants p ON p.id = fr.plant_id
        JOIN cities c ON c.id = fr.city_id
        WHERE c.slug = ?
-         AND fr.start_date <= ?
-         AND fr.end_date >= ?
+         AND substr(fr.start_date, 6, 5) <= ?
+         AND substr(fr.end_date, 6, 5) >= ?
        ORDER BY fr.start_date`
     )
-    .all(citySlug, currentDate, currentDate) as PlantWithDatesRow[];
+    .all(citySlug, md, md) as PlantWithDatesRow[];
 
   return rows.map((row) => ({
     plant: toPlant(row),

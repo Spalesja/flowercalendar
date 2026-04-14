@@ -12,6 +12,8 @@ interface SearchBarProps {
   dateLabel?: string;
   dateRange: DateRange | undefined;
   onDateRangeChange: (range: DateRange | undefined) => void;
+  onSearch: () => void;
+  isLoading?: boolean;
 }
 
 export function SearchBar({
@@ -23,6 +25,8 @@ export function SearchBar({
   dateLabel = "Когда",
   dateRange,
   onDateRangeChange,
+  onSearch,
+  isLoading = false,
 }: SearchBarProps) {
   return (
     <div className="flex flex-col sm:flex-row items-stretch gap-3 w-full max-w-3xl">
@@ -46,8 +50,12 @@ export function SearchBar({
           />
         </div>
       </div>
-      <PrimaryButton className="px-8 py-3 text-base font-bold whitespace-nowrap">
-        Найти цветы
+      <PrimaryButton
+        onClick={onSearch}
+        disabled={isLoading}
+        className="px-8 py-3 text-base font-bold whitespace-nowrap"
+      >
+        {isLoading ? "Поиск..." : "Найти цветы"}
       </PrimaryButton>
     </div>
   );
