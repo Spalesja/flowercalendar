@@ -67,7 +67,7 @@ export function Logo() {
         title="Цветочный календарь"
       >
         <FlowerIcon className="w-[40px] h-[40px] shrink-0" />
-        <span className="text-lg font-bold text-white">
+        <span className="text-lg font-bold text-white hidden min-[375px]:inline">
           Цветочный календарь
         </span>
       </button>
@@ -81,7 +81,7 @@ export function Logo() {
       title="Цветочный календарь"
     >
       <FlowerIcon className="w-[40px] h-[40px] shrink-0" />
-      <span className="text-lg font-bold text-white">
+      <span className="text-lg font-bold text-white hidden min-[375px]:inline">
         Цветочный календарь
       </span>
     </Link>
