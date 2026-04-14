@@ -1,4 +1,5 @@
 import { Container } from "@/components/container";
+import { Logo } from "@/components/logo";
 import { ModeToggle } from "@/components/search/mode-toggle";
 import { SearchBar } from "@/components/search/search-bar";
 import { PlantBloomCard } from "@/components/cards/plant-bloom-card";
@@ -17,9 +18,7 @@ export default function Home() {
       <section className="bg-hero px-4 pb-12 pt-6">
         {/* Logo */}
         <div className="mb-16">
-          <span className="text-2xl cursor-pointer" title="Цветочный календарь">
-            🌸
-          </span>
+          <Logo />
         </div>
 
         <Container className="flex flex-col items-center">
