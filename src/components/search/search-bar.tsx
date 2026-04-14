@@ -12,8 +12,8 @@ export function SearchBar({
 }: SearchBarProps) {
   return (
     <div className="flex flex-col sm:flex-row items-stretch gap-3 w-full max-w-3xl">
-      <div className="flex flex-col sm:flex-row flex-1 rounded-full bg-white shadow-sm overflow-hidden border border-divider">
-        <div className="flex-1 flex items-center pl-[28px] pr-4 py-3 border-b sm:border-b-0 sm:border-r border-divider">
+      <div className="flex flex-col sm:flex-row flex-1 rounded-xl bg-white shadow-sm overflow-hidden border border-divider">
+        <div className="flex-1 flex items-center px-4 py-3 border-b sm:border-b-0 sm:border-r border-divider">
           <input
             type="text"
             placeholder={placeholder}
