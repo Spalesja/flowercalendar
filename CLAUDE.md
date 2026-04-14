@@ -2,6 +2,11 @@
 
 Поисковый веб-сервис для поиска цветущих растений по городам Беларуси и датам.
 
+## Документация 
+- **docs/dev-plan.md** - план разработки
+- **docs/tech-spec.md** - техническая документация
+- **docs/belarus_blooming_database_plus_forsythia.json** - данные о городах и растениях для базы
+
 ## Стек
 
 - **Framework:** Next.js (App Router) + TypeScript + React
