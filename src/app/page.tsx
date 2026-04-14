@@ -1,7 +1,6 @@
 import { Container } from "@/components/container";
 import { Logo } from "@/components/logo";
-import { ModeToggle } from "@/components/search/mode-toggle";
-import { SearchBar } from "@/components/search/search-bar";
+import { HeroSearch } from "@/components/search/hero-search";
 import { PlantBloomCard } from "@/components/cards/plant-bloom-card";
 
 const mockBlooming = [
@@ -28,10 +27,7 @@ export default function Home() {
           </h1>
 
           {/* Mode toggle & Search bar */}
-          <div className="flex flex-col items-center gap-6 w-full">
-            <ModeToggle mode="cities" />
-            <SearchBar placeholder="Минск" />
-          </div>
+          <HeroSearch />
         </Container>
       </section>
 

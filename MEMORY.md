@@ -45,18 +45,21 @@
 - Исправлен case-insensitive поиск для кириллицы (SQLite LIKE + capitalize)
 
 ### Этап 8. Статическая вёрстка главной страницы
-- Hero-секция (bg-hero): SVG-логотип + заголовок, ModeToggle, SearchBar
-- Логотип: src/components/logo.tsx — SVG-цветок (белые лепестки, фиолетовая серединка) + надпись "Цветочный календарь" (Mulish bold, accent-hover). На < 375px надпись скрывается. Кликабелен: на главной — reload, на внутренних — переход на главную
-- Секция "Сейчас цветет в Минске": 4 карточки PlantBloomCard, стрелки навигации, кнопка "Все цветы"
+- Hero-секция (bg-hero): SVG-логотип + заголовок (font-extrabold), ModeToggle, SearchBar
+- Логотип: src/components/logo.tsx — SVG-цветок (белые лепестки, фиолетовые обводки между ними, фиолетовая серединка) + надпись "цветочный календарь" в 2 строки (белый, bold, 24.6px). На < 375px надпись скрывается. Кликабелен: на главной — reload, на внутренних — переход на главную
+- ModeToggle: фон панельки bg-[#c86dd7]/40, неактивный таб text-white/80, активный — bg-white + font-bold. SVG-иконки (цветок и город) через currentColor
+- SearchBar: розовый разделитель (2px, hero-soft) между полями, SVG-иконка календаря (#8e3ab5)
+- Секция "Сейчас цветет в Минске": 4 карточки PlantBloomCard (надписи с pl-25px), стрелки навигации, кнопка "Все цветы" (hover: bg-hero/55)
 - Новые компоненты:
-  - src/components/logo.tsx ("use client") — логотип SVG + название сайта
-  - src/components/search/mode-toggle.tsx ("use client") — переключатель Цветы/Города
-  - src/components/search/search-bar.tsx — поле поиска + дата + кнопка (розовый разделитель между полями)
+  - src/components/logo.tsx ("use client") — SVG-логотип + название сайта
+  - src/components/search/mode-toggle.tsx ("use client") — переключатель Цветы/Города с SVG-иконками
+  - src/components/search/search-bar.tsx — поле поиска + дата (SVG-календарь) + кнопка
   - src/components/cards/plant-bloom-card.tsx — карточка цветущего растения
 - Моковые данные, без бизнес-логики
 
 ## Следующий этап: 9 — Переключатель режимов Города / Растения
 
 ## Важные решения
+- Логотип — SVG-цветок в компоненте, не эмодзи
 - Данные в БД через JSON-импорт, идемпотентный
 - Бизнес-логика вынесена в server/repositories.ts, отдельно от UI
