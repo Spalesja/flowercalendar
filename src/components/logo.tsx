@@ -12,14 +12,14 @@ function FlowerIcon({ className }: { className?: string }) {
       className={className}
     >
       {/* Petals */}
-      <ellipse cx="16" cy="8" rx="5" ry="7" fill="white" opacity="0.9" />
+      <ellipse cx="16" cy="8" rx="5" ry="7" fill="white" opacity="0.88" />
       <ellipse
         cx="16"
         cy="8"
         rx="5"
         ry="7"
         fill="white"
-        opacity="0.9"
+        opacity="0.88"
         transform="rotate(72 16 16)"
       />
       <ellipse
@@ -28,7 +28,7 @@ function FlowerIcon({ className }: { className?: string }) {
         rx="5"
         ry="7"
         fill="white"
-        opacity="0.9"
+        opacity="0.88"
         transform="rotate(144 16 16)"
       />
       <ellipse
@@ -37,7 +37,7 @@ function FlowerIcon({ className }: { className?: string }) {
         rx="5"
         ry="7"
         fill="white"
-        opacity="0.9"
+        opacity="0.88"
         transform="rotate(216 16 16)"
       />
       <ellipse
@@ -46,7 +46,7 @@ function FlowerIcon({ className }: { className?: string }) {
         rx="5"
         ry="7"
         fill="white"
-        opacity="0.9"
+        opacity="0.88"
         transform="rotate(288 16 16)"
       />
       {/* Center */}
@@ -66,7 +66,7 @@ export function Logo() {
         className="flex items-center gap-2.5 cursor-pointer group"
         title="Цветочный календарь"
       >
-        <FlowerIcon className="w-8 h-8 shrink-0" />
+        <FlowerIcon className="w-[40px] h-[40px] shrink-0" />
         <span className="text-lg font-bold text-white">
           Цветочный календарь
         </span>
@@ -80,7 +80,7 @@ export function Logo() {
       className="flex items-center gap-2.5 group"
       title="Цветочный календарь"
     >
-      <FlowerIcon className="w-8 h-8 shrink-0" />
+      <FlowerIcon className="w-[40px] h-[40px] shrink-0" />
       <span className="text-lg font-bold text-white">
         Цветочный календарь
       </span>
