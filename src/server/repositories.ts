@@ -177,14 +177,16 @@ export function getCurrentlyBloomingByCity(
  * Подсказки городов для autocomplete.
  */
 export function searchCitySuggestions(query: string): City[] {
+  const lower = query.toLowerCase();
+  const capitalized = lower.charAt(0).toUpperCase() + lower.slice(1);
   const rows = getDb()
     .prepare(
       `SELECT * FROM cities
-       WHERE name LIKE ? OR slug LIKE ?
+       WHERE name LIKE ? OR name LIKE ? OR slug LIKE ?
        ORDER BY name
        LIMIT 10`
     )
-    .all(`%${query}%`, `%${query}%`) as CityRow[];
+    .all(`%${capitalized}%`, `%${lower}%`, `%${lower}%`) as CityRow[];
   return rows.map(toCity);
 }
 
@@ -192,13 +194,15 @@ export function searchCitySuggestions(query: string): City[] {
  * Подсказки растений для autocomplete.
  */
 export function searchPlantSuggestions(query: string): Plant[] {
+  const lower = query.toLowerCase();
+  const capitalized = lower.charAt(0).toUpperCase() + lower.slice(1);
   const rows = getDb()
     .prepare(
       `SELECT * FROM plants
-       WHERE name LIKE ? OR latin_name LIKE ? OR slug LIKE ?
+       WHERE name LIKE ? OR name LIKE ? OR latin_name LIKE ? OR slug LIKE ?
        ORDER BY name
        LIMIT 10`
     )
-    .all(`%${query}%`, `%${query}%`, `%${query}%`) as PlantRow[];
+    .all(`%${capitalized}%`, `%${lower}%`, `%${lower}%`, `%${lower}%`) as PlantRow[];
   return rows.map(toPlant);
 }

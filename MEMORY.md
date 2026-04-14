@@ -36,7 +36,15 @@
   - getCurrentlyBloomingByCity()
   - searchCitySuggestions(), searchPlantSuggestions()
 
-## Следующий этап: 7 — Статическая вёрстка главной страницы
+### Этап 7. Route handlers и server actions
+- Route handlers (GET, JSON):
+  - /api/suggestions/cities?q= — autocomplete городов
+  - /api/suggestions/plants?q= — autocomplete растений
+  - /api/currently-blooming?city=&date= — "Сейчас цветёт"
+- Server action: src/server/actions.ts — searchAction(mode, slug, startDate, endDate)
+- Исправлен case-insensitive поиск для кириллицы (SQLite LIKE + capitalize)
+
+## Следующий этап: 8 — Статическая вёрстка главной страницы
 
 ## Важные решения
 - Логотип — эмодзи 🌸, не SVG-файл
