@@ -63,7 +63,15 @@
 - Placeholder меняется: "Введите город..." / "Введите растение..." по режиму
 - page.tsx остался серверным, клиентская логика вынесена в HeroSearch
 
-## Следующий этап: 10 — Autocomplete для первого поля
+### Этап 10. Autocomplete для первого поля
+- src/components/search/autocomplete.tsx ("use client") — реюзабельный компонент: debounce 250мс, dropdown, keyboard (ArrowUp/Down/Enter/Escape), закрытие по клику снаружи, AbortController для отмены предыдущих fetch
+- Флаг `justSelected` (useRef) — предотвращает повторное открытие dropdown после выбора варианта
+- Обработка ошибок fetch с логированием (не AbortError)
+- SearchBar и HeroSearch обновлены: query, selectedSlug, apiUrl переключается по режиму (/api/suggestions/cities | /api/suggestions/plants)
+- overflow-visible на контейнере полей, чтобы dropdown не обрезался
+- Фикс: npm rebuild better-sqlite3 при несовпадении NODE_MODULE_VERSION
+
+## Следующий этап: 11 — Date range picker
 
 ## Важные решения
 - Логотип — SVG-цветок в компоненте, не эмодзи
