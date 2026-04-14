@@ -30,7 +30,9 @@ export function SearchBar({
             className="w-full bg-transparent text-text-primary placeholder:text-text-tertiary outline-none text-sm"
             readOnly
           />
-          <span className="text-text-tertiary ml-2 text-lg">📅</span>
+          <svg className="ml-2 w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="#8e3ab5" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h1V3a1 1 0 0 1 1-1ZM4 10v9a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-9H4Zm5 2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1h2Z" />
+          </svg>
         </div>
       </div>
       <PrimaryButton className="px-8 py-3 text-base font-bold whitespace-nowrap">
