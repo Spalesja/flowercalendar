@@ -88,8 +88,9 @@
 - Фикс: npm rebuild better-sqlite3 при несовпадении NODE_MODULE_VERSION
 
 ### Этап 12. Реальный поиск на главной
-- HeroSearch теперь рендерит ВСЮ hero-секцию (Logo, заголовок, ModeToggle, SearchBar) + секцию результатов под ней (вне hero, на bg-surface-soft) — чтобы сдвигать "Сейчас цветет" вниз и не тащить page.tsx в client. page.tsx упрощён: `<HeroSearch />` + секция "Сейчас цветет"
-- Кнопка "Найти цветы" вызывает `searchAction(mode, slug, startDate, endDate)` (server action из этапа 7); даты конвертируются в ISO `yyyy-MM-dd` через date-fns `format`
+- HeroSearch теперь рендерит ВСЮ hero-секцию (Logo, заголовок, ModeToggle, SearchBar) + секцию результатов под ней (вне hero, на bg-surface-soft, pb-0) — чтобы сдвигать "Сейчас цветет" вниз и не тащить page.tsx в client. page.tsx упрощён: `<HeroSearch />` + секция "Сейчас цветет"
+- Route handler `GET /api/search?mode=&slug=&startDate=&endDate=` (src/app/api/search/route.ts) — единый стиль с autocomplete. HeroSearch шлёт `fetch('/api/search?...')`. Server action в src/server/actions.ts остался, но в UI не используется
+- Даты конвертируются в ISO `yyyy-MM-dd` через date-fns `format`
 - Состояние в HeroSearch: `results: SearchResult | null`, `isLoading`, `errorMessage`
 - Inline-сообщение об ошибке (white/80 пилюля под SearchBar) если: не выбран slug из autocomplete, не выбран диапазон дат, или поиск упал. Сбрасывается при изменении любого поля или смене режима
 - Кнопка disabled пока isLoading, текст меняется на "Поиск..."
@@ -97,6 +98,10 @@
 - src/components/search/search-results.tsx — простой список (имя + регион/латинское + диапазон цветения форматированный date-fns "d MMM"), пустое состояние "Ничего не найдено..."
 - Красивые карточки результатов — отложены на этап 13
 - SearchBar получил пропсы `onSearch` и `isLoading`
+
+**Важные баги, исправленные на этапе 12:**
+- **Autocomplete сбрасывал selectedSlug:** при клике на вариант autocomplete вызывал `onSelect(suggestion)` (родитель ставил slug), затем `onChange(suggestion.name)` → `handleQueryChange` → `setSelectedSlug(null)`. Фикс: убрал `onChange(suggestion.name)` из autocomplete `handleSelect`; родительский `handleSelect` теперь сам ставит и `query`, и `selectedSlug` атомарно
+- **Поиск ничего не находил из-за года:** даты цветения в БД хранятся с годом-плейсхолдером `2000` (цикличные), а поиск шёл с реальным годом (например 2026). Лексикографическое сравнение `"2026-04-16" <= "2000-04-30"` всегда false. Фикс: все три search-функции в src/server/repositories.ts (`searchPlantsByCity`, `searchCitiesByPlant`, `getCurrentlyBloomingByCity`) теперь сравнивают только `MM-DD` через `substr(date, 6, 5)`. Edge case: диапазоны через Новый год пока не поддержаны
 
 ## Следующий этап: 13 — Карточки результатов
 
