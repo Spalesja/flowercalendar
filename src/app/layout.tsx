@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Mulish } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin", "cyrillic"],
+const mulish = Mulish({
+  subsets: ["cyrillic", "latin"],
+  variable: "--font-mulish",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru" className={`${geistSans.variable} h-full antialiased`}>
+    <html lang="ru" className={`h-full antialiased ${mulish.variable}`}>
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>
   );

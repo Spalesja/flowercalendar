@@ -7,8 +7,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-heading: var(--font-sans);
+  --font-sans: var(--font-mulish);
+  --font-heading: var(--font-mulish);
 
   /* shadcn semantic tokens */
   --color-sidebar-ring: var(--sidebar-ring);
@@ -114,6 +114,7 @@
   --sidebar-border: #eaeaea;
   --sidebar-ring: #a64ac9;
 }
+
 
 @layer base {
   * {
