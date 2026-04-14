@@ -21,7 +21,7 @@ export function SearchBar({
             readOnly
           />
         </div>
-        <div className="hidden sm:block w-[2px] self-stretch my-2 bg-hero-soft" />
+        <div className="hidden sm:block w-[2px] bg-hero-soft my-2 self-stretch" />
         <hr className="sm:hidden border-t border-hero-soft mx-3" />
         <div className="flex-1 flex items-center px-4 py-3">
           <input
