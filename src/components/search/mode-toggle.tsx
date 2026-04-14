@@ -13,7 +13,7 @@ export function ModeToggle({ mode, onModeChange }: ModeToggleProps) {
     <div className="inline-flex rounded-full bg-white/40 p-1 shadow-sm">
       <button
         className={cn(
-          "flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-colors",
+          "flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors",
           mode === "plants"
             ? "bg-white text-text-primary shadow-sm"
             : "text-text-primary"
@@ -25,7 +25,7 @@ export function ModeToggle({ mode, onModeChange }: ModeToggleProps) {
       </button>
       <button
         className={cn(
-          "flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-colors",
+          "flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors",
           mode === "cities"
             ? "bg-white text-text-primary shadow-sm"
             : "text-text-primary"
