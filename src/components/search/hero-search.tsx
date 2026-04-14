@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import type { DateRange } from "react-day-picker";
 import { ModeToggle } from "@/components/search/mode-toggle";
 import { SearchBar } from "@/components/search/search-bar";
 import type { SearchMode } from "@/types";
@@ -9,6 +10,7 @@ export function HeroSearch() {
   const [mode, setMode] = useState<SearchMode>("cities");
   const [query, setQuery] = useState("");
   const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
+  const [dateRange, setDateRange] = useState<DateRange | undefined>(undefined);
 
   const handleModeChange = (newMode: SearchMode) => {
     setMode(newMode);
@@ -34,6 +36,8 @@ export function HeroSearch() {
         queryValue={query}
         onQueryChange={handleQueryChange}
         onSelect={handleSelect}
+        dateRange={dateRange}
+        onDateRangeChange={setDateRange}
       />
     </div>
   );

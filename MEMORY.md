@@ -63,6 +63,15 @@
 - Placeholder меняется: "Введите город..." / "Введите растение..." по режиму
 - page.tsx остался серверным, клиентская логика вынесена в HeroSearch
 
+### Этап 11. Date range picker
+- Установлены `react-day-picker` и `date-fns`
+- src/components/search/date-range-picker.tsx ("use client") — popover с DayPicker (mode="range", locale=ru, 1 месяц), debounce-free, закрытие по клику снаружи
+- Отображение: "15 апр – 30 апр" (date-fns format с ru), плейсхолдер "Когда" если пусто
+- Кнопка-крестик для сброса вместо иконки календаря, когда диапазон выбран; кнопка "Сбросить" внизу календаря
+- Стилизация под палитру: selected/range start/end — accent (#a64ac9), range middle — hero (#ffb1ed), today — bold accent-hover
+- SearchBar получает `dateRange` и `onDateRangeChange` пропсы; HeroSearch держит состояние useState<DateRange | undefined>
+- z-50 на popover, чтобы не перекрывался autocomplete
+
 ### Этап 10. Autocomplete для первого поля
 - src/components/search/autocomplete.tsx ("use client") — реюзабельный компонент: debounce 250мс, dropdown, keyboard (ArrowUp/Down/Enter/Escape), закрытие по клику снаружи, AbortController для отмены предыдущих fetch
 - Флаг `justSelected` (useRef) — предотвращает повторное открытие dropdown после выбора варианта
@@ -71,7 +80,7 @@
 - overflow-visible на контейнере полей, чтобы dropdown не обрезался
 - Фикс: npm rebuild better-sqlite3 при несовпадении NODE_MODULE_VERSION
 
-## Следующий этап: 11 — Date range picker
+## Следующий этап: 12 — Реальный поиск на главной
 
 ## Важные решения
 - Логотип — SVG-цветок в компоненте, не эмодзи

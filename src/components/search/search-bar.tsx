@@ -1,5 +1,7 @@
 import { PrimaryButton } from "@/components/primary-button";
 import { Autocomplete } from "@/components/search/autocomplete";
+import { DateRangePicker } from "@/components/search/date-range-picker";
+import type { DateRange } from "react-day-picker";
 
 interface SearchBarProps {
   placeholder?: string;
@@ -8,6 +10,8 @@ interface SearchBarProps {
   onQueryChange: (value: string) => void;
   onSelect: (suggestion: { slug: string; name: string }) => void;
   dateLabel?: string;
+  dateRange: DateRange | undefined;
+  onDateRangeChange: (range: DateRange | undefined) => void;
 }
 
 export function SearchBar({
@@ -17,6 +21,8 @@ export function SearchBar({
   onQueryChange,
   onSelect,
   dateLabel = "Когда",
+  dateRange,
+  onDateRangeChange,
 }: SearchBarProps) {
   return (
     <div className="flex flex-col sm:flex-row items-stretch gap-3 w-full max-w-3xl">
@@ -33,15 +39,11 @@ export function SearchBar({
         <div className="hidden sm:block w-[2px] bg-hero-soft my-2 self-stretch" />
         <hr className="sm:hidden border-t border-hero-soft mx-3" />
         <div className="flex-1 flex items-center px-4 py-3">
-          <input
-            type="text"
+          <DateRangePicker
+            value={dateRange}
+            onChange={onDateRangeChange}
             placeholder={dateLabel}
-            className="w-full bg-transparent text-text-primary placeholder:text-text-tertiary outline-none text-sm"
-            readOnly
           />
-          <svg className="ml-2 w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="#8e3ab5" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h1V3a1 1 0 0 1 1-1ZM4 10v9a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-9H4Zm5 2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1h2Z" />
-          </svg>
         </div>
       </div>
       <PrimaryButton className="px-8 py-3 text-base font-bold whitespace-nowrap">
