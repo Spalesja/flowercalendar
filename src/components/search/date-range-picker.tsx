@@ -88,20 +88,7 @@ export function DateRangePicker({ value, onChange, placeholder = "Когда" }:
       </div>
 
       {open && (
-        <div
-          className="absolute z-50 mt-2 right-0 sm:right-auto sm:left-0 bg-white rounded-xl shadow-lg border border-divider p-3"
-          style={
-            {
-              "--rdp-accent-color": "#ffb1ed",
-              "--rdp-accent-background-color": "#ffe4f7",
-              "--rdp-range_middle-color": "#1a1a1a",
-              "--rdp-range_start-color": "#1a1a1a",
-              "--rdp-range_end-color": "#1a1a1a",
-              "--rdp-day_button-border-radius": "8px",
-              "--rdp-selected-border": "0",
-            } as React.CSSProperties
-          }
-        >
+        <div className="absolute z-50 mt-2 right-0 sm:right-auto sm:left-0 bg-white rounded-xl shadow-lg border border-divider p-3">
           <DayPicker
             mode="range"
             locale={ru}
@@ -109,10 +96,24 @@ export function DateRangePicker({ value, onChange, placeholder = "Когда" }:
             selected={value}
             onSelect={onChange}
             showOutsideDays
+            style={
+              {
+                "--rdp-accent-color": "#ffb1ed",
+                "--rdp-accent-background-color": "#ffe4f7",
+                "--rdp-range_middle-background-color": "#ffe4f7",
+                "--rdp-range_middle-color": "#1a1a1a",
+                "--rdp-range_start-color": "#1a1a1a",
+                "--rdp-range_end-color": "#1a1a1a",
+                "--rdp-range_start-date-background-color": "#ffb1ed",
+                "--rdp-range_end-date-background-color": "#ffb1ed",
+                "--rdp-day_button-border-radius": "8px",
+                "--rdp-selected-border": "0",
+                "--rdp-today-color": "#8e3ab5",
+              } as React.CSSProperties
+            }
             classNames={{
               caption_label: "text-sm font-bold text-text-primary capitalize",
-              chevron: "fill-[#ffb1ed]",
-              today: "font-bold !text-accent-hover",
+              chevron: "fill-[#a64ac9]",
             }}
           />
           {value?.from && (
