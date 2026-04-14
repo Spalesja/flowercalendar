@@ -45,17 +45,18 @@
 - Исправлен case-insensitive поиск для кириллицы (SQLite LIKE + capitalize)
 
 ### Этап 8. Статическая вёрстка главной страницы
-- Hero-секция (bg-hero): логотип 🌸, заголовок, ModeToggle, SearchBar
+- Hero-секция (bg-hero): SVG-логотип + заголовок, ModeToggle, SearchBar
+- Логотип: src/components/logo.tsx — SVG-цветок (белые лепестки, фиолетовая серединка) + надпись "Цветочный календарь" (Mulish bold, accent-hover). На < 375px надпись скрывается. Кликабелен: на главной — reload, на внутренних — переход на главную
 - Секция "Сейчас цветет в Минске": 4 карточки PlantBloomCard, стрелки навигации, кнопка "Все цветы"
 - Новые компоненты:
+  - src/components/logo.tsx ("use client") — логотип SVG + название сайта
   - src/components/search/mode-toggle.tsx ("use client") — переключатель Цветы/Города
-  - src/components/search/search-bar.tsx — поле поиска + дата + кнопка
+  - src/components/search/search-bar.tsx — поле поиска + дата + кнопка (розовый разделитель между полями)
   - src/components/cards/plant-bloom-card.tsx — карточка цветущего растения
 - Моковые данные, без бизнес-логики
 
 ## Следующий этап: 9 — Переключатель режимов Города / Растения
 
 ## Важные решения
-- Логотип — эмодзи 🌸, не SVG-файл
 - Данные в БД через JSON-импорт, идемпотентный
 - Бизнес-логика вынесена в server/repositories.ts, отдельно от UI
