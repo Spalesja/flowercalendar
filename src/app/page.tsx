@@ -70,7 +70,7 @@ export default function Home() {
 
             {/* "Все цветы" button */}
             <div className="mt-6 flex justify-center">
-              <button className="rounded-full border border-divider px-8 py-2.5 text-sm font-bold text-text-secondary hover:bg-hero hover:border-hero transition-colors">
+              <button className="rounded-full border border-divider px-8 py-2.5 text-sm font-bold text-text-secondary hover:bg-[#ffb1ed]/55 hover:border-[#ffb1ed]/55 transition-colors">
                 Все цветы
               </button>
             </div>
