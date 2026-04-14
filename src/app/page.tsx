@@ -16,23 +16,23 @@ export default function Home() {
       {/* Hero section */}
       <section className="bg-hero px-4 pb-12 pt-6">
         {/* Logo */}
-        <div className="mb-8">
+        <div className="mb-16">
           <span className="text-2xl cursor-pointer" title="Цветочный календарь">
             🌸
           </span>
         </div>
 
-        <Container className="flex flex-col items-center gap-6">
+        <Container className="flex flex-col items-center">
           {/* Title */}
-          <h1 className="text-3xl sm:text-4xl font-bold text-text-primary text-center">
+          <h1 className="text-3xl sm:text-4xl font-bold text-text-primary text-center mb-[60px]">
             Найди свой цветок
           </h1>
 
-          {/* Mode toggle */}
-          <ModeToggle mode="cities" />
-
-          {/* Search bar */}
-          <SearchBar placeholder="Минск" />
+          {/* Mode toggle & Search bar */}
+          <div className="flex flex-col items-center gap-6 w-full">
+            <ModeToggle mode="cities" />
+            <SearchBar placeholder="Минск" />
+          </div>
         </Container>
       </section>
 
