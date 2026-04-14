@@ -15,7 +15,7 @@ export function ModeToggle({ mode, onModeChange }: ModeToggleProps) {
         className={cn(
           "flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors",
           mode === "plants"
-            ? "bg-white text-text-primary shadow-sm"
+            ? "bg-white text-text-primary shadow-sm font-bold"
             : "text-text-primary"
         )}
         onClick={() => onModeChange?.("plants")}
@@ -34,7 +34,7 @@ export function ModeToggle({ mode, onModeChange }: ModeToggleProps) {
         className={cn(
           "flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors",
           mode === "cities"
-            ? "bg-white text-text-primary shadow-sm"
+            ? "bg-white text-text-primary shadow-sm font-bold"
             : "text-text-primary"
         )}
         onClick={() => onModeChange?.("cities")}
