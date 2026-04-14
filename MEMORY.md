@@ -64,11 +64,18 @@
 - page.tsx остался серверным, клиентская логика вынесена в HeroSearch
 
 ### Этап 11. Date range picker
-- Установлены `react-day-picker` и `date-fns`
-- src/components/search/date-range-picker.tsx ("use client") — popover с DayPicker (mode="range", locale=ru, 1 месяц), debounce-free, закрытие по клику снаружи
-- Отображение: "15 апр – 30 апр" (date-fns format с ru), плейсхолдер "Когда" если пусто
-- Кнопка-крестик для сброса вместо иконки календаря, когда диапазон выбран; кнопка "Сбросить" внизу календаря
-- Стилизация под палитру: selected/range start/end — accent (#a64ac9), range middle — hero (#ffb1ed), today — bold accent-hover
+- Установлены `react-day-picker` v9 и `date-fns`
+- src/components/search/date-range-picker.tsx ("use client") — popover с DayPicker (mode="range", locale=ru, 1 месяц), закрытие по клику снаружи
+- Триггер — `<div role="button">` (а НЕ `<button>`), чтобы вложенный крестик-сброс не нарушал HTML (button не может быть потомком button → hydration error)
+- Отображение в поле "Когда": "15 апр – 30 апр" (date-fns format с ru, font-semibold), плейсхолдер если пусто
+- Крестик-сброс в поле ввода вместо иконки календаря, когда диапазон выбран
+- Кнопка "Применить" в попапе (rounded-md, фиолетовая #a64ac9) — закрывает календарь, сохраняя диапазон. Disabled пока ничего не выбрано
+- Цвета через CSS-переменные `--rdp-*` в `style` пропе DayPicker (НЕ на родителе — переменные объявлены на `.rdp-root` со значениями по умолчанию и не наследуются с родителя):
+  - `--rdp-accent-color` / `--rdp-range_start-date-background-color` / `--rdp-range_end-date-background-color` = #ffb1ed
+  - `--rdp-range_middle-background-color` = #ffe4f7 (бледно-розовый)
+  - `--rdp-day_button-border-radius`: 8px (скруглённые прямоугольники)
+  - `--rdp-today-color`: #8e3ab5
+- chevron (стрелки навигации) — fill #a64ac9 через classNames
 - SearchBar получает `dateRange` и `onDateRangeChange` пропсы; HeroSearch держит состояние useState<DateRange | undefined>
 - z-50 на popover, чтобы не перекрывался autocomplete
 
