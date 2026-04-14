@@ -55,7 +55,7 @@ export function DateRangePicker({ value, onChange, placeholder = "Когда" }:
         className="w-full flex items-center text-left bg-transparent outline-none cursor-pointer"
       >
         <span
-          className={`flex-1 text-sm truncate ${display ? "text-text-primary" : "text-text-tertiary"}`}
+          className={`flex-1 text-sm truncate ${display ? "text-text-primary font-semibold" : "text-text-tertiary"}`}
         >
           {display || placeholder}
         </span>
@@ -116,17 +116,6 @@ export function DateRangePicker({ value, onChange, placeholder = "Когда" }:
               chevron: "fill-[#a64ac9]",
             }}
           />
-          {value?.from && (
-            <div className="flex justify-end pt-2 border-t border-divider mt-2">
-              <button
-                type="button"
-                onClick={() => onChange(undefined)}
-                className="text-xs text-accent hover:text-accent-hover font-medium"
-              >
-                Сбросить
-              </button>
-            </div>
-          )}
         </div>
       )}
     </div>
