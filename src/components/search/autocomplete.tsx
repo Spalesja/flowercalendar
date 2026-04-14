@@ -35,10 +35,16 @@ export function Autocomplete({
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const justSelected = useRef(false);
   const debouncedQuery = useDebounce(value, 250);
 
   // Fetch suggestions
   useEffect(() => {
+    if (justSelected.current) {
+      justSelected.current = false;
+      return;
+    }
+
     if (debouncedQuery.length < 1) {
       setSuggestions([]);
       setIsOpen(false);
@@ -80,6 +86,7 @@ export function Autocomplete({
 
   const handleSelect = useCallback(
     (suggestion: Suggestion) => {
+      justSelected.current = true;
       onSelect(suggestion);
       onChange(suggestion.name);
       setIsOpen(false);
