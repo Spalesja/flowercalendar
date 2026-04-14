@@ -26,7 +26,7 @@ export function PlantBloomCard({
           </div>
         )}
       </div>
-      <p className="font-medium text-sm text-text-primary">{name}</p>
+      <p className="font-semibold text-base text-text-primary">{name}</p>
       <p className="text-xs text-text-tertiary">до {endDate}</p>
     </a>
   );

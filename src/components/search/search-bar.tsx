@@ -31,7 +31,7 @@ export function SearchBar({
           <span className="text-text-tertiary ml-2 text-lg">📅</span>
         </div>
       </div>
-      <PrimaryButton className="px-8 py-3 text-sm whitespace-nowrap">
+      <PrimaryButton className="px-8 py-3 text-base font-semibold whitespace-nowrap">
         Найти цветы
       </PrimaryButton>
     </div>
