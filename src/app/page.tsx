@@ -59,7 +59,7 @@ export default function Home() {
             </div>
 
             {/* Plant cards */}
-            <div className="flex gap-4 overflow-x-auto pb-2 -mx-2 px-2">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {mockBlooming.map((plant) => (
                 <PlantBloomCard
                   key={plant.name}

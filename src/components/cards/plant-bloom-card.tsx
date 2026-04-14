@@ -12,7 +12,7 @@ export function PlantBloomCard({
   href = "#",
 }: PlantBloomCardProps) {
   return (
-    <a href={href} className="group flex-shrink-0 w-40 sm:w-44">
+    <a href={href} className="group flex-1 min-w-0">
       <div className="aspect-square rounded-xl bg-surface-soft overflow-hidden mb-2">
         {imageUrl ? (
           <img
