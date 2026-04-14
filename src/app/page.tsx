@@ -1,19 +1,83 @@
+import { Container } from "@/components/container";
+import { ModeToggle } from "@/components/search/mode-toggle";
+import { SearchBar } from "@/components/search/search-bar";
+import { PlantBloomCard } from "@/components/cards/plant-bloom-card";
+
+const mockBlooming = [
+  { name: "Одуванчик", endDate: "16 мая" },
+  { name: "Сакура", endDate: "21 апреля" },
+  { name: "Яблоня", endDate: "1 мая" },
+  { name: "Магнолия", endDate: "14 апреля" },
+];
+
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col items-center justify-center bg-[#f5f5f5]">
-      <main className="flex flex-col items-center gap-6 text-center px-4">
-        <div className="text-5xl">🌸</div>
-        <h1 className="text-3xl font-bold text-[#1a1a1a]">
-          Найди свой цветок
-        </h1>
-        <p className="text-lg text-[#4a4a4a] max-w-md">
-          Цветочный календарь Беларуси — узнай, что цветёт в твоём городе прямо
-          сейчас
-        </p>
-        <div className="mt-4 rounded-full bg-[#a64ac9] px-8 py-3 text-white font-medium">
-          Скоро здесь будет поиск
+    <div className="flex flex-1 flex-col">
+      {/* Hero section */}
+      <section className="bg-hero px-4 pb-12 pt-6">
+        {/* Logo */}
+        <div className="mb-8">
+          <span className="text-2xl cursor-pointer" title="Цветочный календарь">
+            🌸
+          </span>
         </div>
-      </main>
+
+        <Container className="flex flex-col items-center gap-6">
+          {/* Title */}
+          <h1 className="text-3xl sm:text-4xl font-bold text-text-primary text-center">
+            Найди свой цветок
+          </h1>
+
+          {/* Mode toggle */}
+          <ModeToggle mode="cities" />
+
+          {/* Search bar */}
+          <SearchBar placeholder="Минск" />
+        </Container>
+      </section>
+
+      {/* "Сейчас цветет" section */}
+      <section className="bg-surface-soft flex-1 px-4 py-10">
+        <Container>
+          <div className="rounded-2xl bg-white p-6 sm:p-8 shadow-sm">
+            {/* Header */}
+            <div className="flex items-start justify-between mb-6">
+              <div>
+                <h2 className="text-xl sm:text-2xl font-bold text-text-primary">
+                  Сейчас цветет
+                </h2>
+                <p className="text-text-secondary mt-0.5">в Минске</p>
+              </div>
+              <div className="flex gap-2">
+                <button className="w-8 h-8 rounded-full border border-divider flex items-center justify-center text-text-secondary hover:bg-surface-soft transition-colors">
+                  ‹
+                </button>
+                <button className="w-8 h-8 rounded-full border border-divider flex items-center justify-center text-text-secondary hover:bg-surface-soft transition-colors">
+                  ›
+                </button>
+              </div>
+            </div>
+
+            {/* Plant cards */}
+            <div className="flex gap-4 overflow-x-auto pb-2 -mx-2 px-2">
+              {mockBlooming.map((plant) => (
+                <PlantBloomCard
+                  key={plant.name}
+                  name={plant.name}
+                  endDate={plant.endDate}
+                />
+              ))}
+            </div>
+
+            {/* "Все цветы" button */}
+            <div className="mt-6 flex justify-center">
+              <button className="rounded-full border border-divider px-8 py-2.5 text-sm text-text-secondary hover:bg-surface-soft transition-colors">
+                Все цветы
+              </button>
+            </div>
+          </div>
+        </Container>
+      </section>
     </div>
   );
 }
