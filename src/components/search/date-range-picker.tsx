@@ -42,10 +42,17 @@ export function DateRangePicker({ value, onChange, placeholder = "Когда" }:
 
   return (
     <div ref={containerRef} className="relative w-full">
-      <button
-        type="button"
+      <div
+        role="button"
+        tabIndex={0}
         onClick={() => setOpen((v) => !v)}
-        className="w-full flex items-center text-left bg-transparent outline-none"
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            setOpen((v) => !v);
+          }
+        }}
+        className="w-full flex items-center text-left bg-transparent outline-none cursor-pointer"
       >
         <span
           className={`flex-1 text-sm truncate ${display ? "text-text-primary" : "text-text-tertiary"}`}
@@ -78,10 +85,23 @@ export function DateRangePicker({ value, onChange, placeholder = "Когда" }:
             <path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h1V3a1 1 0 0 1 1-1ZM4 10v9a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-9H4Zm5 2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1h2Z" />
           </svg>
         )}
-      </button>
+      </div>
 
       {open && (
-        <div className="absolute z-50 mt-2 right-0 sm:right-auto sm:left-0 bg-white rounded-xl shadow-lg border border-divider p-3">
+        <div
+          className="absolute z-50 mt-2 right-0 sm:right-auto sm:left-0 bg-white rounded-xl shadow-lg border border-divider p-3"
+          style={
+            {
+              "--rdp-accent-color": "#ffb1ed",
+              "--rdp-accent-background-color": "#ffe4f7",
+              "--rdp-range_middle-color": "#1a1a1a",
+              "--rdp-range_start-color": "#1a1a1a",
+              "--rdp-range_end-color": "#1a1a1a",
+              "--rdp-day_button-border-radius": "8px",
+              "--rdp-selected-border": "0",
+            } as React.CSSProperties
+          }
+        >
           <DayPicker
             mode="range"
             locale={ru}
@@ -91,12 +111,8 @@ export function DateRangePicker({ value, onChange, placeholder = "Когда" }:
             showOutsideDays
             classNames={{
               caption_label: "text-sm font-bold text-text-primary capitalize",
-              nav_button: "text-accent hover:text-accent-hover",
-              day_selected: "!bg-accent !text-white hover:!bg-accent-hover",
-              day_range_start: "!bg-accent !text-white !rounded-l-md",
-              day_range_end: "!bg-accent !text-white !rounded-r-md",
-              day_range_middle: "!bg-hero !text-text-primary !rounded-none",
-              day_today: "font-bold text-accent-hover",
+              chevron: "fill-[#ffb1ed]",
+              today: "font-bold !text-accent-hover",
             }}
           />
           {value?.from && (
