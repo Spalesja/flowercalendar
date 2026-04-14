@@ -72,9 +72,9 @@ export function Logo() {
         className="flex items-center gap-2.5 cursor-pointer group"
         title="Цветочный календарь"
       >
-        <FlowerIcon className="w-[40px] h-[40px] shrink-0" />
-        <span className="text-lg font-bold text-accent-hover hidden min-[375px]:inline">
-          Цветочный календарь
+        <FlowerIcon className="w-[53px] h-[53px] shrink-0" />
+        <span className="text-[24.6px] font-bold text-white leading-tight hidden min-[375px]:inline-block">
+          цветочный<br />календарь
         </span>
       </button>
     );
@@ -86,7 +86,7 @@ export function Logo() {
       className="flex items-center gap-2.5 group"
       title="Цветочный календарь"
     >
-      <FlowerIcon className="w-[40px] h-[40px] shrink-0" />
+      <FlowerIcon className="w-[53px] h-[53px] shrink-0" />
       <span className="text-lg font-bold text-accent-hover hidden min-[375px]:inline">
         Цветочный календарь
       </span>
