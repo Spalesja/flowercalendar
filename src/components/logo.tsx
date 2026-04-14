@@ -49,6 +49,12 @@ function FlowerIcon({ className }: { className?: string }) {
         opacity="0.88"
         transform="rotate(288 16 16)"
       />
+      {/* Lines between petals */}
+      <line x1="18.9" y1="12" x2="22.5" y2="7.1" stroke="#8e3ab5" strokeWidth="0.5" opacity="0.6" />
+      <line x1="20.8" y1="17.5" x2="26.5" y2="19.4" stroke="#8e3ab5" strokeWidth="0.5" opacity="0.6" />
+      <line x1="16" y1="21" x2="16" y2="27" stroke="#8e3ab5" strokeWidth="0.5" opacity="0.6" />
+      <line x1="11.2" y1="17.5" x2="5.5" y2="19.4" stroke="#8e3ab5" strokeWidth="0.5" opacity="0.6" />
+      <line x1="13.1" y1="12" x2="9.5" y2="7.1" stroke="#8e3ab5" strokeWidth="0.5" opacity="0.6" />
       {/* Center */}
       <circle cx="16" cy="16" r="4" fill="#a64ac9" />
     </svg>
@@ -67,7 +73,7 @@ export function Logo() {
         title="Цветочный календарь"
       >
         <FlowerIcon className="w-[40px] h-[40px] shrink-0" />
-        <span className="text-lg font-bold text-white hidden min-[375px]:inline">
+        <span className="text-lg font-bold text-accent-hover hidden min-[375px]:inline">
           Цветочный календарь
         </span>
       </button>
@@ -81,7 +87,7 @@ export function Logo() {
       title="Цветочный календарь"
     >
       <FlowerIcon className="w-[40px] h-[40px] shrink-0" />
-      <span className="text-lg font-bold text-white hidden min-[375px]:inline">
+      <span className="text-lg font-bold text-accent-hover hidden min-[375px]:inline">
         Цветочный календарь
       </span>
     </Link>
