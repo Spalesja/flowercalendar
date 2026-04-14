@@ -24,7 +24,7 @@ export default function Home() {
 
         <Container className="flex flex-col items-center">
           {/* Title */}
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-text-primary text-center mb-[60px]">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-text-primary text-center mb-[75px]">
             Найди свой цветок
           </h1>
 
