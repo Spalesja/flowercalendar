@@ -397,6 +397,15 @@
       "short_description": "Тополь в календаре цветения Беларуси.",
       "full_description": "Тополь используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
       "hero_image": ""
+    },
+    {
+      "id": 39,
+      "slug": "sakura",
+      "name": "Сакура",
+      "latin_name": "Prunus serrulata",
+      "short_description": "Сакура в календаре цветения Беларуси.",
+      "full_description": "Сакура используется как отдельная сущность в поиске по сезонам и областям Беларуси.",
+      "hero_image": ""
     }
   ],
   "floweringRecords": [
@@ -1995,6 +2004,48 @@
       "plant_id": 38,
       "start_date": "2000-04-14",
       "end_date": "2000-04-27"
+    },
+    {
+      "id": 229,
+      "city_id": 1,
+      "plant_id": 39,
+      "start_date": "2000-04-09",
+      "end_date": "2000-04-22"
+    },
+    {
+      "id": 230,
+      "city_id": 2,
+      "plant_id": 39,
+      "start_date": "2000-04-06",
+      "end_date": "2000-04-19"
+    },
+    {
+      "id": 231,
+      "city_id": 3,
+      "plant_id": 39,
+      "start_date": "2000-04-02",
+      "end_date": "2000-04-15"
+    },
+    {
+      "id": 232,
+      "city_id": 4,
+      "plant_id": 39,
+      "start_date": "2000-04-14",
+      "end_date": "2000-04-27"
+    },
+    {
+      "id": 233,
+      "city_id": 5,
+      "plant_id": 39,
+      "start_date": "2000-04-04",
+      "end_date": "2000-04-17"
+    },
+    {
+      "id": 234,
+      "city_id": 6,
+      "plant_id": 39,
+      "start_date": "2000-04-11",
+      "end_date": "2000-04-24"
     }
   ]
 }
