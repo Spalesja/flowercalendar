@@ -50,16 +50,6 @@ export function Autocomplete({
     }
 
     if (debouncedQuery.length < 1) {
-      const isFocused =
-        wrapperRef.current?.contains(document.activeElement) ?? false;
-      if (isFocused && defaultSuggestions.length > 0) {
-        setSuggestions(defaultSuggestions);
-        setIsOpen(true);
-        setActiveIndex(-1);
-      } else {
-        setSuggestions([]);
-        setIsOpen(false);
-      }
       return;
     }
 
@@ -83,7 +73,23 @@ export function Autocomplete({
       });
 
     return () => controller.abort();
-  }, [debouncedQuery, apiUrl, defaultSuggestions]);
+  }, [debouncedQuery, apiUrl]);
+
+  // Immediate: show defaults when value cleared (no debounce)
+  useEffect(() => {
+    if (value.length > 0) return;
+    if (justSelected.current) return;
+    const isFocused =
+      wrapperRef.current?.contains(document.activeElement) ?? false;
+    if (isFocused && defaultSuggestions.length > 0) {
+      setSuggestions(defaultSuggestions);
+      setIsOpen(true);
+      setActiveIndex(-1);
+    } else {
+      setSuggestions([]);
+      setIsOpen(false);
+    }
+  }, [value, defaultSuggestions]);
 
   // Close on outside click
   useEffect(() => {
