@@ -50,8 +50,16 @@ export function Autocomplete({
     }
 
     if (debouncedQuery.length < 1) {
-      setSuggestions([]);
-      setIsOpen(false);
+      const isFocused =
+        wrapperRef.current?.contains(document.activeElement) ?? false;
+      if (isFocused && defaultSuggestions.length > 0) {
+        setSuggestions(defaultSuggestions);
+        setIsOpen(true);
+        setActiveIndex(-1);
+      } else {
+        setSuggestions([]);
+        setIsOpen(false);
+      }
       return;
     }
 
@@ -75,7 +83,7 @@ export function Autocomplete({
       });
 
     return () => controller.abort();
-  }, [debouncedQuery, apiUrl]);
+  }, [debouncedQuery, apiUrl, defaultSuggestions]);
 
   // Close on outside click
   useEffect(() => {
