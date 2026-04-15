@@ -99,6 +99,12 @@
 - Красивые карточки результатов — отложены на этап 13
 - SearchBar получил пропсы `onSearch` и `isLoading`
 
+**Полировка UX после этапа 12:**
+- Инпут автокомплита становится `font-semibold`, когда `selectedSlug` выбран (через prop `isSelected` у Autocomplete и SearchBar)
+- На `onBlur` инпута автокомплита: если введённый текст точно совпадает (без учёта регистра) с одним из текущих suggestions — авто-выбор этого варианта (чтобы кнопка Найти работала и при ручном вводе)
+- В режиме **Цветы** скрыт `DateRangePicker` и разделитель — поле "Введите растение..." растягивается на всю ширину. Валидация дат отключена для этого режима, в API передаётся диапазон `2000-01-01`..`2000-12-31` (полный год, благодаря MM-DD сравнению возвращает все города, где растение цветёт)
+- SearchBar получил проп `showDateRange` (default true); HeroSearch передаёт `mode === "cities"`
+
 **Важные баги, исправленные на этапе 12:**
 - **Autocomplete сбрасывал selectedSlug:** при клике на вариант autocomplete вызывал `onSelect(suggestion)` (родитель ставил slug), затем `onChange(suggestion.name)` → `handleQueryChange` → `setSelectedSlug(null)`. Фикс: убрал `onChange(suggestion.name)` из autocomplete `handleSelect`; родительский `handleSelect` теперь сам ставит и `query`, и `selectedSlug` атомарно
 - **Поиск ничего не находил из-за года:** даты цветения в БД хранятся с годом-плейсхолдером `2000` (цикличные), а поиск шёл с реальным годом (например 2026). Лексикографическое сравнение `"2026-04-16" <= "2000-04-30"` всегда false. Фикс: все три search-функции в src/server/repositories.ts (`searchPlantsByCity`, `searchCitiesByPlant`, `getCurrentlyBloomingByCity`) теперь сравнивают только `MM-DD` через `substr(date, 6, 5)`. Edge case: диапазоны через Новый год пока не поддержаны
