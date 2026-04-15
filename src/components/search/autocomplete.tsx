@@ -15,6 +15,7 @@ interface AutocompleteProps {
   onSelect: (suggestion: Suggestion) => void;
   isSelected?: boolean;
   defaultSuggestions?: Suggestion[];
+  defaultSuggestionsTitle?: string;
   onSubmit?: () => void;
 }
 
@@ -35,6 +36,7 @@ export function Autocomplete({
   onSelect,
   isSelected = false,
   defaultSuggestions = [],
+  defaultSuggestionsTitle,
   onSubmit,
 }: AutocompleteProps) {
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
@@ -173,6 +175,11 @@ export function Autocomplete({
       />
       {isOpen && suggestions.length > 0 && (
         <ul className="absolute left-0 right-0 top-full mt-3 bg-white rounded-xl shadow-lg border border-divider z-50 max-h-60 overflow-y-auto py-1">
+          {value.length === 0 && defaultSuggestionsTitle && (
+            <li className="px-4 pt-2 pb-1 text-sm font-semibold text-text-primary pointer-events-none">
+              {defaultSuggestionsTitle}
+            </li>
+          )}
           {suggestions.map((s, i) => (
             <li
               key={s.slug}

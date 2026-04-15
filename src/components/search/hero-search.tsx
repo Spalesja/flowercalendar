@@ -135,6 +135,9 @@ export function HeroSearch() {
               defaultSuggestions={
                 mode === "cities" ? DEFAULT_CITY_SUGGESTIONS : DEFAULT_PLANT_SUGGESTIONS
               }
+              defaultSuggestionsTitle={
+                mode === "cities" ? "Популярные города" : "Популярные растения"
+              }
             />
             {errorMessage && (
               <p className="text-sm font-semibold text-accent-hover bg-white/80 px-4 py-2 rounded-full">
