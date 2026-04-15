@@ -15,6 +15,7 @@ interface AutocompleteProps {
   onSelect: (suggestion: Suggestion) => void;
   isSelected?: boolean;
   defaultSuggestions?: Suggestion[];
+  onSubmit?: () => void;
 }
 
 function useDebounce(value: string, delay: number) {
@@ -34,6 +35,7 @@ export function Autocomplete({
   onSelect,
   isSelected = false,
   defaultSuggestions = [],
+  onSubmit,
 }: AutocompleteProps) {
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -113,6 +115,18 @@ export function Autocomplete({
   );
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter") {
+      if (isOpen && activeIndex >= 0 && suggestions.length > 0) {
+        e.preventDefault();
+        handleSelect(suggestions[activeIndex]);
+      } else if (isSelected && onSubmit) {
+        e.preventDefault();
+        setIsOpen(false);
+        onSubmit();
+      }
+      return;
+    }
+
     if (!isOpen || suggestions.length === 0) return;
 
     if (e.key === "ArrowDown") {
@@ -121,9 +135,6 @@ export function Autocomplete({
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
       setActiveIndex((i) => (i > 0 ? i - 1 : suggestions.length - 1));
-    } else if (e.key === "Enter" && activeIndex >= 0) {
-      e.preventDefault();
-      handleSelect(suggestions[activeIndex]);
     } else if (e.key === "Escape") {
       setIsOpen(false);
     }

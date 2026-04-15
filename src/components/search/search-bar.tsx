@@ -46,6 +46,7 @@ export function SearchBar({
             onSelect={onSelect}
             isSelected={isSelected}
             defaultSuggestions={defaultSuggestions}
+            onSubmit={onSearch}
           />
         </div>
         {showDateRange && (
