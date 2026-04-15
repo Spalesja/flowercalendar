@@ -16,6 +16,7 @@ interface SearchBarProps {
   isLoading?: boolean;
   isSelected?: boolean;
   showDateRange?: boolean;
+  defaultSuggestions?: { slug: string; name: string }[];
 }
 
 export function SearchBar({
@@ -31,6 +32,7 @@ export function SearchBar({
   isLoading = false,
   isSelected = false,
   showDateRange = true,
+  defaultSuggestions,
 }: SearchBarProps) {
   return (
     <div className="flex flex-col sm:flex-row items-stretch gap-3 w-full max-w-3xl">
@@ -43,6 +45,7 @@ export function SearchBar({
             onChange={onQueryChange}
             onSelect={onSelect}
             isSelected={isSelected}
+            defaultSuggestions={defaultSuggestions}
           />
         </div>
         {showDateRange && (

@@ -14,6 +14,7 @@ interface AutocompleteProps {
   onChange: (value: string) => void;
   onSelect: (suggestion: Suggestion) => void;
   isSelected?: boolean;
+  defaultSuggestions?: Suggestion[];
 }
 
 function useDebounce(value: string, delay: number) {
@@ -32,6 +33,7 @@ export function Autocomplete({
   onChange,
   onSelect,
   isSelected = false,
+  defaultSuggestions = [],
 }: AutocompleteProps) {
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -121,7 +123,13 @@ export function Autocomplete({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         onFocus={() => {
-          if (suggestions.length > 0) setIsOpen(true);
+          if (suggestions.length > 0) {
+            setIsOpen(true);
+          } else if (value.length === 0 && defaultSuggestions.length > 0) {
+            setSuggestions(defaultSuggestions);
+            setIsOpen(true);
+            setActiveIndex(-1);
+          }
         }}
         onKeyDown={handleKeyDown}
         onBlur={() => {

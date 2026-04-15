@@ -10,6 +10,24 @@ import { SearchBar } from "@/components/search/search-bar";
 import { SearchResults } from "@/components/search/search-results";
 import type { SearchMode, SearchResult } from "@/types";
 
+const DEFAULT_CITY_SUGGESTIONS = [
+  { slug: "minsk", name: "Минск" },
+  { slug: "grodno", name: "Гродно" },
+  { slug: "brest", name: "Брест" },
+  { slug: "vitebsk", name: "Витебск" },
+  { slug: "gomel", name: "Гомель" },
+  { slug: "mogilev", name: "Могилёв" },
+];
+
+const DEFAULT_PLANT_SUGGESTIONS = [
+  { slug: "sakura", name: "Сакура" },
+  { slug: "magnoliya", name: "Магнолия" },
+  { slug: "siren", name: "Сирень" },
+  { slug: "podsolnuh", name: "Подсолнух" },
+  { slug: "lipa", name: "Липа" },
+  { slug: "vasilyok", name: "Василёк" },
+];
+
 export function HeroSearch() {
   const [mode, setMode] = useState<SearchMode>("plants");
   const [query, setQuery] = useState("");
@@ -114,6 +132,9 @@ export function HeroSearch() {
               isLoading={isLoading}
               isSelected={selectedSlug !== null}
               showDateRange={mode === "cities"}
+              defaultSuggestions={
+                mode === "cities" ? DEFAULT_CITY_SUGGESTIONS : DEFAULT_PLANT_SUGGESTIONS
+              }
             />
             {errorMessage && (
               <p className="text-sm font-semibold text-accent-hover bg-white/80 px-4 py-2 rounded-full">
