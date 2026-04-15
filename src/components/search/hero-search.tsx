@@ -11,7 +11,7 @@ import { SearchResults } from "@/components/search/search-results";
 import type { SearchMode, SearchResult } from "@/types";
 
 export function HeroSearch() {
-  const [mode, setMode] = useState<SearchMode>("cities");
+  const [mode, setMode] = useState<SearchMode>("plants");
   const [query, setQuery] = useState("");
   const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
   const [dateRange, setDateRange] = useState<DateRange | undefined>(undefined);
