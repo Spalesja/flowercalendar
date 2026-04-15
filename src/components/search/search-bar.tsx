@@ -15,6 +15,7 @@ interface SearchBarProps {
   onSearch: () => void;
   isLoading?: boolean;
   isSelected?: boolean;
+  showDateRange?: boolean;
 }
 
 export function SearchBar({
@@ -29,6 +30,7 @@ export function SearchBar({
   onSearch,
   isLoading = false,
   isSelected = false,
+  showDateRange = true,
 }: SearchBarProps) {
   return (
     <div className="flex flex-col sm:flex-row items-stretch gap-3 w-full max-w-3xl">
@@ -43,15 +45,19 @@ export function SearchBar({
             isSelected={isSelected}
           />
         </div>
-        <div className="hidden sm:block w-[2px] bg-hero-soft my-2 self-stretch" />
-        <hr className="sm:hidden border-t border-hero-soft mx-3" />
-        <div className="flex-1 flex items-center px-4 py-3">
-          <DateRangePicker
-            value={dateRange}
-            onChange={onDateRangeChange}
-            placeholder={dateLabel}
-          />
-        </div>
+        {showDateRange && (
+          <>
+            <div className="hidden sm:block w-[2px] bg-hero-soft my-2 self-stretch" />
+            <hr className="sm:hidden border-t border-hero-soft mx-3" />
+            <div className="flex-1 flex items-center px-4 py-3">
+              <DateRangePicker
+                value={dateRange}
+                onChange={onDateRangeChange}
+                placeholder={dateLabel}
+              />
+            </div>
+          </>
+        )}
       </div>
       <PrimaryButton
         onClick={onSearch}

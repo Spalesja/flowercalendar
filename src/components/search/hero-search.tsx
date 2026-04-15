@@ -53,7 +53,7 @@ export function HeroSearch() {
       );
       return;
     }
-    if (!dateRange?.from || !dateRange?.to) {
+    if (mode === "cities" && (!dateRange?.from || !dateRange?.to)) {
       setErrorMessage("Выберите диапазон дат");
       return;
     }
@@ -61,8 +61,14 @@ export function HeroSearch() {
     setErrorMessage(null);
     setIsLoading(true);
     try {
-      const startDate = format(dateRange.from, "yyyy-MM-dd");
-      const endDate = format(dateRange.to, "yyyy-MM-dd");
+      const startDate =
+        mode === "cities" && dateRange?.from
+          ? format(dateRange.from, "yyyy-MM-dd")
+          : "2000-01-01";
+      const endDate =
+        mode === "cities" && dateRange?.to
+          ? format(dateRange.to, "yyyy-MM-dd")
+          : "2000-12-31";
       const params = new URLSearchParams({
         mode,
         slug: selectedSlug,
@@ -107,6 +113,7 @@ export function HeroSearch() {
               onSearch={handleSearch}
               isLoading={isLoading}
               isSelected={selectedSlug !== null}
+              showDateRange={mode === "cities"}
             />
             {errorMessage && (
               <p className="text-sm font-semibold text-accent-hover bg-white/80 px-4 py-2 rounded-full">
