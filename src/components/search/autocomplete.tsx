@@ -13,6 +13,7 @@ interface AutocompleteProps {
   value: string;
   onChange: (value: string) => void;
   onSelect: (suggestion: Suggestion) => void;
+  isSelected?: boolean;
 }
 
 function useDebounce(value: string, delay: number) {
@@ -30,6 +31,7 @@ export function Autocomplete({
   value,
   onChange,
   onSelect,
+  isSelected = false,
 }: AutocompleteProps) {
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -122,7 +124,19 @@ export function Autocomplete({
           if (suggestions.length > 0) setIsOpen(true);
         }}
         onKeyDown={handleKeyDown}
-        className="w-full bg-transparent text-text-primary placeholder:text-text-tertiary outline-none text-sm"
+        onBlur={() => {
+          if (!isSelected && value.trim().length > 0) {
+            const match = suggestions.find(
+              (s) => s.name.toLowerCase() === value.trim().toLowerCase()
+            );
+            if (match) {
+              handleSelect(match);
+            }
+          }
+        }}
+        className={`w-full bg-transparent text-text-primary placeholder:text-text-tertiary outline-none text-sm ${
+          isSelected ? "font-semibold" : ""
+        }`}
       />
       {isOpen && suggestions.length > 0 && (
         <ul className="absolute left-0 right-0 top-full mt-3 bg-white rounded-xl shadow-lg border border-divider z-50 max-h-60 overflow-y-auto py-1">

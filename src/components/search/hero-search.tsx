@@ -106,6 +106,7 @@ export function HeroSearch() {
               onDateRangeChange={handleDateRangeChange}
               onSearch={handleSearch}
               isLoading={isLoading}
+              isSelected={selectedSlug !== null}
             />
             {errorMessage && (
               <p className="text-sm font-semibold text-accent-hover bg-white/80 px-4 py-2 rounded-full">

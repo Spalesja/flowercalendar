@@ -14,6 +14,7 @@ interface SearchBarProps {
   onDateRangeChange: (range: DateRange | undefined) => void;
   onSearch: () => void;
   isLoading?: boolean;
+  isSelected?: boolean;
 }
 
 export function SearchBar({
@@ -27,6 +28,7 @@ export function SearchBar({
   onDateRangeChange,
   onSearch,
   isLoading = false,
+  isSelected = false,
 }: SearchBarProps) {
   return (
     <div className="flex flex-col sm:flex-row items-stretch gap-3 w-full max-w-3xl">
@@ -38,6 +40,7 @@ export function SearchBar({
             value={queryValue}
             onChange={onQueryChange}
             onSelect={onSelect}
+            isSelected={isSelected}
           />
         </div>
         <div className="hidden sm:block w-[2px] bg-hero-soft my-2 self-stretch" />
