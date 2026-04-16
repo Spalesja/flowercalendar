@@ -37,6 +37,7 @@ export function HeroSearch() {
   const [results, setResults] = useState<SearchResult | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [bloomingCitySlug, setBloomingCitySlug] = useState("minsk");
 
   const handleModeChange = (newMode: SearchMode) => {
     setMode(newMode);
@@ -72,8 +73,15 @@ export function HeroSearch() {
       );
       return;
     }
+
+    // В режиме "cities" — обновляем блок "Сейчас цветет" при любом нажатии
+    if (mode === "cities") {
+      setBloomingCitySlug(selectedSlug);
+    }
+
+    // Для поиска результатов в режиме "cities" нужны даты
     if (mode === "cities" && (!dateRange?.from || !dateRange?.to)) {
-      setErrorMessage("Выберите диапазон дат");
+      // Не показываем ошибку — блок "Сейчас цветет" уже обновился
       return;
     }
 
@@ -151,9 +159,7 @@ export function HeroSearch() {
 
       {results && <SearchResults result={results} />}
 
-      <CurrentlyBlooming
-        citySlug={mode === "cities" && selectedSlug ? selectedSlug : "minsk"}
-      />
+      <CurrentlyBlooming citySlug={bloomingCitySlug} />
     </>
   );
 }
