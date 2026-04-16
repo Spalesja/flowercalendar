@@ -8,6 +8,7 @@ import { Logo } from "@/components/logo";
 import { ModeToggle } from "@/components/search/mode-toggle";
 import { SearchBar } from "@/components/search/search-bar";
 import { SearchResults } from "@/components/search/search-results";
+import { CurrentlyBlooming } from "@/components/currently-blooming";
 import type { SearchMode, SearchResult } from "@/types";
 
 const DEFAULT_CITY_SUGGESTIONS = [
@@ -149,6 +150,10 @@ export function HeroSearch() {
       </section>
 
       {results && <SearchResults result={results} />}
+
+      <CurrentlyBlooming
+        citySlug={mode === "cities" && selectedSlug ? selectedSlug : "minsk"}
+      />
     </>
   );
 }
