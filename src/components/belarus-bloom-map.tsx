@@ -151,7 +151,7 @@ export function BelarusBloomMap({ items }: BelarusBloomMapProps) {
 
           <div className="flex flex-col lg:flex-row gap-8 items-center">
             {/* Map */}
-            <div className="flex-1 w-full max-w-[520px]">
+            <div className="flex-1 w-full max-w-[780px]">
               {svgContent ? (
                 <div dangerouslySetInnerHTML={{ __html: svgContent }} />
               ) : (
