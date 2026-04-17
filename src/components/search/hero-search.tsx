@@ -9,6 +9,7 @@ import { ModeToggle } from "@/components/search/mode-toggle";
 import { SearchBar } from "@/components/search/search-bar";
 import { SearchResults } from "@/components/search/search-results";
 import { CurrentlyBlooming } from "@/components/currently-blooming";
+import { BelarusBloomMap } from "@/components/belarus-bloom-map";
 import type { SearchMode, SearchResult } from "@/types";
 
 const DEFAULT_CITY_SUGGESTIONS = [
@@ -158,6 +159,13 @@ export function HeroSearch() {
       </section>
 
       {results && <SearchResults result={results} />}
+
+      {results &&
+        results.mode === "cities" &&
+        selectedSlug === "sakura" &&
+        results.items.length > 0 && (
+          <BelarusBloomMap items={results.items} />
+        )}
 
       <CurrentlyBlooming citySlug={bloomingCitySlug} />
     </>
