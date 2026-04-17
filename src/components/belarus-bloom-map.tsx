@@ -34,9 +34,10 @@ function formatMapDate(iso: string) {
 
 interface BelarusBloomMapProps {
   items: CitySearchResult[];
+  plantName: string;
 }
 
-export function BelarusBloomMap({ items }: BelarusBloomMapProps) {
+export function BelarusBloomMap({ items, plantName }: BelarusBloomMapProps) {
   const [svgContent, setSvgContent] = useState<string>("");
   const svgFetchedRef = useRef<string>("");
 
@@ -146,7 +147,7 @@ export function BelarusBloomMap({ items }: BelarusBloomMapProps) {
       <Container>
         <div className="rounded-2xl bg-white p-6 sm:p-8 shadow-sm">
           <h2 className="text-xl sm:text-2xl font-bold text-text-primary mb-6 text-center">
-            Карта цветения Сакуры по регионам Беларуси
+            Карта цветения: {plantName}
           </h2>
 
           <div className="flex flex-col lg:flex-row gap-8 items-center">

@@ -162,9 +162,8 @@ export function HeroSearch() {
 
       {results &&
         results.mode === "cities" &&
-        selectedSlug === "sakura" &&
         results.items.length > 0 && (
-          <BelarusBloomMap items={results.items} />
+          <BelarusBloomMap items={results.items} plantName={query} />
         )}
 
       <CurrentlyBlooming citySlug={bloomingCitySlug} />
