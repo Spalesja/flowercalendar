@@ -163,6 +163,9 @@ export function BelarusBloomMap({ items, plantName }: BelarusBloomMapProps) {
         text.setAttribute("font-size", "22");
         text.setAttribute("font-weight", "700");
         text.setAttribute("fill", "#1a1a1a");
+        text.setAttribute("stroke", "#ffffff");
+        text.setAttribute("stroke-width", "2");
+        text.setAttribute("paint-order", "stroke");
         text.setAttribute("font-family", "system-ui, sans-serif");
         text.textContent = item.city.name;
         labelsGroup.appendChild(text);
