@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 interface PlantBloomCardProps {
   name: string;
   endDate: string;
@@ -11,14 +15,18 @@ export function PlantBloomCard({
   imageUrl,
   href = "#",
 }: PlantBloomCardProps) {
+  const [imgError, setImgError] = useState(false);
+  const showImage = imageUrl && !imgError;
+
   return (
     <a href={href} className="group flex-1 min-w-0">
       <div className="aspect-square rounded-[20%] bg-surface-soft overflow-hidden mb-2">
-        {imageUrl ? (
+        {showImage ? (
           <img
             src={imageUrl}
             alt={name}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+            onError={() => setImgError(true)}
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center text-4xl bg-gradient-to-br from-hero/30 to-accent-strong/20">

@@ -158,6 +158,7 @@ export function CurrentlyBlooming({ citySlug }: CurrentlyBloomingProps) {
                 key={item.plant.slug}
                 name={item.plant.name}
                 endDate={formatEndDate(item.floweringEnd)}
+                imageUrl={`/images/flowers-images/${item.plant.slug}.jpg`}
                 href={`/plants/${item.plant.slug}`}
               />
             ))}
