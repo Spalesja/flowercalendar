@@ -65,6 +65,7 @@ const PLANT_GENITIVE: Record<string, string> = {
   "Берёза": "Берёзы",
   "Тополь": "Тополя",
   "Сакура": "Сакуры",
+  "Алыча": "Алычи",
 };
 
 function getPlantGenitive(name: string): string {
