@@ -19,6 +19,9 @@ const CITY_PREPOSITIONAL: Record<string, string> = {
   mogilev: "Могилёве",
 };
 
+/** Кастомная вертикальная позиция фото в карточке (для лучшей композиции) */
+const PLANT_IMAGE_POSITION: Record<string, string> = {};
+
 interface CurrentlyBloomingProps {
   /** slug города (default "minsk") */
   citySlug: string;
@@ -159,6 +162,7 @@ export function CurrentlyBlooming({ citySlug }: CurrentlyBloomingProps) {
                 name={item.plant.name}
                 endDate={formatEndDate(item.floweringEnd)}
                 imageUrl={`/images/flowers-images/${item.plant.slug}.jpg`}
+                imageObjectPosition={PLANT_IMAGE_POSITION[item.plant.slug]}
                 href={`/plants/${item.plant.slug}`}
               />
             ))}

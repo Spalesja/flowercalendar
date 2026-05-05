@@ -6,6 +6,7 @@ interface PlantBloomCardProps {
   name: string;
   endDate: string;
   imageUrl?: string;
+  imageObjectPosition?: string;
   href?: string;
 }
 
@@ -13,6 +14,7 @@ export function PlantBloomCard({
   name,
   endDate,
   imageUrl,
+  imageObjectPosition,
   href = "#",
 }: PlantBloomCardProps) {
   const [imgError, setImgError] = useState(false);
@@ -26,6 +28,7 @@ export function PlantBloomCard({
             src={imageUrl}
             alt={name}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+            style={imageObjectPosition ? { objectPosition: imageObjectPosition } : undefined}
             onError={() => setImgError(true)}
           />
         ) : (
